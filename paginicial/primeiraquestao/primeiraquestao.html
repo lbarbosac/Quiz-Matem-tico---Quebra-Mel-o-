@@ -3,151 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quebra Melão</title>
+    <title>Quebra Melão - Quiz de Matemática</title>
     <link rel="stylesheet" href="primeiraquestao.css">
 </head>
 <body>
 
-    <img id="iconeCerebro" src="img/cerebro-azul.png" alt="">
+    <img id="iconeCerebro" src="img/cerebro-azul.png" alt="Cérebro">
 
     <h1 id="h1Quebra">Quebra</h1>
     <h2 id="h1Melao">Melão</h2>
 
     <div class="bolinhaQuestao">
-        <p class="numQuestao">1</p>
+        <p class="numQuestao" id="question-number">1</p>
     </div>
     
     <div class="pergunta">
-        <h1 class="txtPergunta">
-            O que é uma espressão numérica?
+        <h1 class="txtPergunta" id="question-text">
+            <!-- Pergunta carregada pelo JavaScript -->
         </h1>
     </div>
 
-    <div class="alternativas">
-
-        <div class="alternativa1">
-            <a href=""><p>
-                É uma fração com numerador e denominador inteiros
-            </p></a>
-        </div>
-
-        <div class="alternativa2">
-            <a href=""><p>
-                O resultado final de uma operação qualquer
-            </p></a>
-        </div>
-
-        <div class="alternativa3">
-            <a href=""><p>
-               Comunicar-se com alguém usando apenas números 
-            </p></a>
-        </div>
-
-        <div class="alternativa4">
-            <a href="#"><p>
-                Uma sequência de operações numéricas indicadas, mas não efetuadas
-            </p>
-        </div></a></a>
-
+    <div class="alternativas" id="alternativas">
+        <!-- Alternativas serão carregadas pelo JavaScript -->
     </div>
 
     <script src="primeiraquestao.js"></script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quebra Melão</title>
-    <link rel="stylesheet" href="primeiraquestao.css">
-</head>
-<body>
-
-    <img id="iconeCerebro" src="img/cerebro-azul.png" alt="">
-
-    <h1 id="h1Quebra">Quebra</h1>
-    <h2 id="h1Melao">Melão</h2>
-
-    <div class="bolinhaQuestao">
-        <p class="numQuestao" id="numeroQuestao">1</p>
-    </div>
-    
-    <div class="pergunta">
-        <h1 class="txtPergunta" id="textoPergunta"></h1>
-    </div>
-
-    <div class="alternativas" id="listaAlternativas"></div>
-
-    <script>
-        const questoes = [
-            {
-                "pergunta": "O que é uma expressão numérica?",
-                "alternativas": [
-                    "É uma fração com numerador e denominador inteiros",
-                    "O resultado final de uma operação qualquer",
-                    "Comunicar-se com alguém usando apenas números",
-                    "Uma sequência de operações numéricas indicadas, mas não efetuadas"
-                ],
-                "respostaCorreta": 3
-            },
-            {
-                "pergunta": "Qual é o valor de 5 + 3?",
-                "alternativas": [
-                    "6",
-                    "7",
-                    "8",
-                    "9"
-                ],
-                "respostaCorreta": 2
-            },
-            {
-                "pergunta": "O que é uma raiz quadrada?",
-                "alternativas": [
-                    "O número que, multiplicado por si mesmo, resulta em outro número",
-                    "Um tipo de fração",
-                    "Uma operação de adição",
-                    "Um número decimal"
-                ],
-                "respostaCorreta": 0
-            }
-        ];
-
-        let numeroQuestao = 0;
-
-        function carregarQuestao() {
-            const questaoAtual = questoes[numeroQuestao];
-            document.getElementById("numeroQuestao").innerText = numeroQuestao + 1;
-            document.getElementById("textoPergunta").innerText = questaoAtual.pergunta;
-            const lista = document.getElementById("listaAlternativas");
-            lista.innerHTML = ""; // Limpa as alternativas existentes
-
-            questaoAtual.alternativas.forEach((alternativa, index) => {
-                const div = document.createElement("div");
-                div.className = "alternativa";
-                div.innerHTML = `<a href="#" onclick="verificarResposta(${index})"><p>${alternativa}</p></a>`;
-                lista.appendChild(div);
-            });
-        }
-
-        function verificarResposta(respostaEscolhida) {
-            const questaoAtual = questoes[numeroQuestao];
-            if (respostaEscolhida === questaoAtual.respostaCorreta) {
-                alert("Resposta correta!");
-            } else {
-                alert("Resposta errada!");
-            }
-            numeroQuestao++;
-            if (numeroQuestao < questoes.length) {
-                carregarQuestao();
-            } else {
-                alert("Você completou todas as questões!");
-            }
-        }
-
-        window.onload = carregarQuestao;
-    </script>
 
 </body>
 </html>

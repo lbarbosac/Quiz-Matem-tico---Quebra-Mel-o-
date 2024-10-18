@@ -1,5 +1,4 @@
-// JSON data with all 15 questions
-const questionsData = {
+{
     "questions": [
       {
         "questionText": "Qual é o valor de x na equação 2x + 3 = 11?",
@@ -152,94 +151,5 @@ const questionsData = {
         "correctAnswer": 2
       }
     ]
-  };
-  
- 
-  let currentQuestionIndex = 0;
-  
-
-  function loadQuestion(questionIndex) {
-    const questionData = questionsData.questions[questionIndex];
-  
-    
-    document.getElementById('question-text').innerText = questionData.questionText;
-  
-   
-    document.getElementById('question-number').innerText = questionIndex + 1;
-  
-    
-    const alternativesContainer = document.getElementById('alternativas');
-    alternativesContainer.innerHTML = '';
-  
-    
-    questionData.options.forEach((option, index) => {
-      const alternativeDiv = document.createElement('div');
-      alternativeDiv.classList.add('alternativa');
-      alternativeDiv.innerHTML = `<a href="#">${option}</a>`;
-  
-      alternativeDiv.addEventListener('click', function () {
-        if (index === questionData.correctAnswer) {
-          alert('Correto!');
-        } else {
-          alert('Errado! Tente novamente.');
-        }
-  
-       
-        if (index === questionData.correctAnswer && currentQuestionIndex < questionsData.questions.length - 1) {
-          currentQuestionIndex++;
-          loadQuestion(currentQuestionIndex);
-        }
-      });
-  
-      alternativesContainer.appendChild(alternativeDiv);
-    });
   }
-  
-
-
-let currentQuestionInde = 0;
-
-
-function loadQuestion(questionIndex) {
-  const questionData = questionsData.questions[questionIndex];
-
-
-  document.getElementById('question-text').innerText = questionData.questionText;
-
-  
-  document.getElementById('question-number').innerText = questionIndex + 1;
-
-  
-  const alternativesContainer = document.getElementById('alternativas');
-  alternativesContainer.innerHTML = '';
-
-  
-  questionData.options.forEach((option, index) => {
-    const alternativeDiv = document.createElement('div');
-    alternativeDiv.classList.add('alternativa');
-    alternativeDiv.innerHTML = `<a href="#">${option}</a>`;
-
-   
-    alternativeDiv.addEventListener('click', function () {
-      if (index === questionData.correctAnswer) {
-        if (currentQuestionIndex < questionsData.questions.length - 1) {
-          
-          currentQuestionIndex++;
-          loadQuestion(currentQuestionIndex);
-        } else {
-          
-          window.location.href = "final.html";
-        }
-      } else {
-        
-        window.location.href = "restart.html";
-      }
-    });
-
-    alternativesContainer.appendChild(alternativeDiv);
-  });
-}
-
-
-loadQuestion(currentQuestionIndex);
   
