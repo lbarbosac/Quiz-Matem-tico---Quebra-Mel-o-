@@ -1,4 +1,4 @@
-// JSON data with all 15 questions
+
 const questionsData = {
     "questions": [
       {
@@ -154,20 +154,19 @@ const questionsData = {
     ]
   };
   
- 
+  
   let currentQuestionIndex = 0;
   
-
+  
   function loadQuestion(questionIndex) {
     const questionData = questionsData.questions[questionIndex];
   
     
     document.getElementById('question-text').innerText = questionData.questionText;
   
-   
+    
     document.getElementById('question-number').innerText = questionIndex + 1;
   
-    
     const alternativesContainer = document.getElementById('alternativas');
     alternativesContainer.innerHTML = '';
   
@@ -177,6 +176,7 @@ const questionsData = {
       alternativeDiv.classList.add('alternativa');
       alternativeDiv.innerHTML = `<a href="#">${option}</a>`;
   
+      
       alternativeDiv.addEventListener('click', function () {
         if (index === questionData.correctAnswer) {
           alert('Correto!');
@@ -184,7 +184,7 @@ const questionsData = {
           alert('Errado! Tente novamente.');
         }
   
-       
+        
         if (index === questionData.correctAnswer && currentQuestionIndex < questionsData.questions.length - 1) {
           currentQuestionIndex++;
           loadQuestion(currentQuestionIndex);
@@ -195,51 +195,6 @@ const questionsData = {
     });
   }
   
-
-
-let currentQuestionInde = 0;
-
-
-function loadQuestion(questionIndex) {
-  const questionData = questionsData.questions[questionIndex];
-
-
-  document.getElementById('question-text').innerText = questionData.questionText;
-
   
-  document.getElementById('question-number').innerText = questionIndex + 1;
-
-  
-  const alternativesContainer = document.getElementById('alternativas');
-  alternativesContainer.innerHTML = '';
-
-  
-  questionData.options.forEach((option, index) => {
-    const alternativeDiv = document.createElement('div');
-    alternativeDiv.classList.add('alternativa');
-    alternativeDiv.innerHTML = `<a href="#">${option}</a>`;
-
-   
-    alternativeDiv.addEventListener('click', function () {
-      if (index === questionData.correctAnswer) {
-        if (currentQuestionIndex < questionsData.questions.length - 1) {
-          
-          currentQuestionIndex++;
-          loadQuestion(currentQuestionIndex);
-        } else {
-          
-          window.location.href = "final.html";
-        }
-      } else {
-        
-        window.location.href = "restart.html";
-      }
-    });
-
-    alternativesContainer.appendChild(alternativeDiv);
-  });
-}
-
-
-loadQuestion(currentQuestionIndex);
+  loadQuestion(currentQuestionIndex);
   
