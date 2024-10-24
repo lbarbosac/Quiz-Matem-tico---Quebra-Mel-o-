@@ -4,73 +4,73 @@ const questionsData = {
     {
       // Texto da pergunta
       "questionText": "Qual é o valor de x na equação 2x + 3 = 11?",
-      // Opções de resposta para essa pergunta
+      
       "options": [
-        "x = 4", // Primeira opção
-        "x = 5", // Segunda opção
-        "x = 6", // Terceira opção
-        "x = 7"  // Quarta opção
+        "x = 4 ",
+        "x = 5", 
+        "x = 6", 
+        "x = 7"  
       ],
-      // Índice da resposta correta (neste caso, a primeira opção)
+      
       "correctAnswer": 0
     },
     {
       "questionText": "Qual é o valor da expressão (2 + 3) × 5?",
       "options": [
-        "10", // Primeira opção
-        "15", // Segunda opção
-        "20", // Terceira opção
-        "25"  // Quarta opção
+        "10", 
+        "15", 
+        "20", 
+        "25"  
       ],
-      "correctAnswer": 3 // A quarta opção é a correta
+      "correctAnswer": 3 
     },
     {
       "questionText": "Qual é o valor de √49?",
       "options": [
-        "6",  // Primeira opção
-        "7",  // Segunda opção
-        "8",  // Terceira opção
-        "9"   // Quarta opção
+        "6",  
+        "7",  
+        "8",  
+        "9"   
       ],
       "correctAnswer": 1 // A segunda opção é a correta
     },
     {
       "questionText": "Se um triângulo tem lados de 3 cm, 4 cm e 5 cm, qual é o tipo deste triângulo?",
       "options": [
-        "Equilátero", // Primeira opção
-        "Isósceles",  // Segunda opção
-        "Escaleno",   // Terceira opção
-        "Retângulo"   // Quarta opção
+        "Equilátero", 
+        "Isósceles",  
+        "Escaleno",   
+        "Retângulo"   
       ],
-      "correctAnswer": 3 // Triângulo retângulo, quarta opção
+      "correctAnswer": 3 
     },
     {
       "questionText": "Qual é o perímetro de um quadrado com lados de 5 cm?",
       "options": [
-        "10 cm", // Primeira opção
-        "15 cm", // Segunda opção
-        "20 cm", // Terceira opção
-        "25 cm"  // Quarta opção
+        "10 cm", 
+        "15 cm", 
+        "20 cm", 
+        "25 cm"  
       ],
-      "correctAnswer": 2 // Perímetro = 4 * lado = 20 cm, terceira opção
+      "correctAnswer": 2 
     },
     {
       "questionText": "Simplifique a fração 8/16.",
       "options": [
-        "1/2", // Primeira opção
-        "2/3", // Segunda opção
-        "3/4", // Terceira opção
-        "1/4"  // Quarta opção
+        "1/2", 
+        "2/3", 
+        "3/4", 
+        "1/4"  
       ],
-      "correctAnswer": 0 // Fração simplificada = 1/2, primeira opção
+      "correctAnswer": 0 
     },
     {
       "questionText": "Qual é o valor de π arredondado para duas casas decimais?",
       "options": [
-        "3.12", // Primeira opção
-        "3.14", // Segunda opção
-        "3.16", // Terceira opção
-        "3.18"  // Quarta opção
+        "3.12", 
+        "3.14", 
+        "3.16", 
+        "3.18"  
       ],
       "correctAnswer": 1 // Valor de π = 3.14, segunda opção
     },
