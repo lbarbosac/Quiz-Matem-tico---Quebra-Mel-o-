@@ -1,32 +1,32 @@
 {
     "questions": [
       {
-        "questionText": "Qual é o valor de x na equação 2x + 3 = 11?",
+        "questionText": "Quantas vezes o Grêmio ganhou a Copa Libertadores da América?",
         "options": [
-          "x = 4",
-          "x = 5",
-          "x = 6",
-          "x = 7"
+          "3",
+          "8",
+          "1",
+          "0"
         ],
         "correctAnswer": 0
       },
       {
-        "questionText": "Qual é o valor da expressão (2 + 3) × 5?",
+        "questionText": "Em que ano o Grêmio ganhou o Mundial de Clubes?",
         "options": [
-          "10",
-          "15",
-          "20",
-          "25"
+          "1990",
+          "1983",
+          "2000",
+          "2017"
         ],
-        "correctAnswer": 3
+        "correctAnswer": 1
       },
       {
-        "questionText": "Qual é o valor de √49?",
+        "questionText": "Qual jogador marcou o gol do título da Copa do Brasil de 2016?",
         "options": [
-          "6",
-          "7",
-          "8",
-          "9"
+          "Jardel",
+          "Paulo Nunes",
+          "Everton Cebolinha",
+          "Renato Portaluppi"
         ],
         "correctAnswer": 1
       },

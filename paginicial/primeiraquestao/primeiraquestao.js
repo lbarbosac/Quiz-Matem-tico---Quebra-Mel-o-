@@ -6,7 +6,7 @@ const questionsData = {
       "questionText": "Qual é o valor de x na equação 2x + 3 = 11?",
       // Opções de resposta para essa pergunta
       "options": [
-        "x = 4", // Primeira opção
+        "x = 3", // Primeira opção
         "x = 5", // Segunda opção
         "x = 6", // Terceira opção
         "x = 7"  // Quarta opção
@@ -18,11 +18,11 @@ const questionsData = {
       "questionText": "Qual é o valor da expressão (2 + 3) × 5?",
       "options": [
         "10", // Primeira opção
-        "15", // Segunda opção
+        "1983", // Segunda opção
         "20", // Terceira opção
         "25"  // Quarta opção
       ],
-      "correctAnswer": 3 // A quarta opção é a correta
+      "correctAnswer": 1 // A quarta opção é a correta
     },
     {
       "questionText": "Qual é o valor de √49?",
