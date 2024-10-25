@@ -3,156 +3,156 @@ const questionsData = {
   "questions": [
     {
       // Texto da pergunta
-      "questionText": "Qual é o valor de x na equação 2x + 3 = 11?",
+      "questionText": "Qual ano o Grêmio ganhou sua primeira Libertadores?",
       // Opções de resposta para essa pergunta
       "options": [
-        "x = 3", // Primeira opção
-        "x = 5", // Segunda opção
-        "x = 6", // Terceira opção
-        "x = 7"  // Quarta opção
+        "1983", // Primeira opção
+        "1995", // Segunda opção
+        "2017", // Terceira opção
+        "2023"  // Quarta opção
       ],
       // Índice da resposta correta (neste caso, a primeira opção)
       "correctAnswer": 0
     },
     {
-      "questionText": "Qual é o valor da expressão (2 + 3) × 5?",
-      "options": [
-        "10", // Primeira opção
-        "1983", // Segunda opção
-        "20", // Terceira opção
-        "25"  // Quarta opção
-      ],
-      "correctAnswer": 1 // A quarta opção é a correta
-    },
-    {
-      "questionText": "Qual é o valor de √49?",
-      "options": [
-        "6",  // Primeira opção
-        "7",  // Segunda opção
-        "8",  // Terceira opção
-        "9"   // Quarta opção
-      ],
-      "correctAnswer": 1 // A segunda opção é a correta
-    },
-    {
-      "questionText": "Se um triângulo tem lados de 3 cm, 4 cm e 5 cm, qual é o tipo deste triângulo?",
-      "options": [
-        "Equilátero", // Primeira opção
-        "Isósceles",  // Segunda opção
-        "Escaleno",   // Terceira opção
-        "Retângulo"   // Quarta opção
-      ],
-      "correctAnswer": 3 // Triângulo retângulo, quarta opção
-    },
-    {
-      "questionText": "Qual é o perímetro de um quadrado com lados de 5 cm?",
-      "options": [
-        "10 cm", // Primeira opção
-        "15 cm", // Segunda opção
-        "20 cm", // Terceira opção
-        "25 cm"  // Quarta opção
-      ],
-      "correctAnswer": 2 // Perímetro = 4 * lado = 20 cm, terceira opção
-    },
-    {
-      "questionText": "Simplifique a fração 8/16.",
-      "options": [
-        "1/2", // Primeira opção
-        "2/3", // Segunda opção
-        "3/4", // Terceira opção
-        "1/4"  // Quarta opção
-      ],
-      "correctAnswer": 0 // Fração simplificada = 1/2, primeira opção
-    },
-    {
-      "questionText": "Qual é o valor de π arredondado para duas casas decimais?",
-      "options": [
-        "3.12", // Primeira opção
-        "3.14", // Segunda opção
-        "3.16", // Terceira opção
-        "3.18"  // Quarta opção
-      ],
-      "correctAnswer": 1 // Valor de π = 3.14, segunda opção
-    },
-    {
-      "questionText": "Qual é o valor de x se 3x = 15?",
-      "options": [
-        "x = 3", // Primeira opção
-        "x = 4", // Segunda opção
-        "x = 5", // Terceira opção
-        "x = 6"  // Quarta opção
-      ],
-      "correctAnswer": 2 // x = 15 / 3 = 5, terceira opção
-    },
-    {
-      "questionText": "Qual é o ângulo de um triângulo equilátero?",
-      "options": [
-        "30°", // Primeira opção
-        "45°", // Segunda opção
-        "60°", // Terceira opção
-        "90°"  // Quarta opção
-      ],
-      "correctAnswer": 2 // Ângulo = 60°, terceira opção
-    },
-    {
-      "questionText": "Qual é o produto de 7 e 8?",
-      "options": [
-        "48", // Primeira opção
-        "54", // Segunda opção
-        "56", // Terceira opção
-        "64"  // Quarta opção
-      ],
-      "correctAnswer": 2 // 7 * 8 = 56, terceira opção
-    },
-    {
-      "questionText": "Se um círculo tem raio de 10 cm, qual é a área aproximada do círculo? (Use π = 3.14)",
-      "options": [
-        "314 cm²",   // Primeira opção
-        "3140 cm²",  // Segunda opção
-        "31.4 cm²",  // Terceira opção
-        "31400 cm²"  // Quarta opção
-      ],
-      "correctAnswer": 0 // Área = πr² ≈ 314 cm², primeira opção
-    },
-    {
-      "questionText": "Qual é o valor de 2³?",
-      "options": [
-        "6",  // Primeira opção
-        "8",  // Segunda opção
-        "9",  // Terceira opção
-        "12"  // Quarta opção
-      ],
-      "correctAnswer": 1 // 2³ = 8, segunda opção
-    },
-    {
-      "questionText": "Resolva a equação: 5x - 4 = 16.",
-      "options": [
-        "x = 2", // Primeira opção
-        "x = 3", // Segunda opção
-        "x = 4", // Terceira opção
-        "x = 5"  // Quarta opção
-      ],
-      "correctAnswer": 3 // x = 5, quarta opção
-    },
-    {
-      "questionText": "Se dois ângulos de um triângulo medem 45° e 90°, qual é o valor do terceiro ângulo?",
-      "options": [
-        "30°", // Primeira opção
-        "45°", // Segunda opção
-        "60°", // Terceira opção
-        "90°"  // Quarta opção
-      ],
-      "correctAnswer": 1 // Terceiro ângulo = 45°, segunda opção
-    },
-    {
-      "questionText": "Qual é a razão entre 50 e 10?",
+      "questionText": "Quantas Copas do Brasil o Grêmio tem?",
       "options": [
         "3", // Primeira opção
-        "4", // Segunda opção
-        "5", // Terceira opção
-        "6"  // Quarta opção
+        "6", // Segunda opção
+        "7", // Terceira opção
+        "5"  // Quarta opção
       ],
-      "correctAnswer": 2 // Razão = 50 / 10 = 5, terceira opção
+      "correctAnswer": 3 // A quarta opção é a correta
+    },
+    {
+      "questionText": "Em que ano rolou o iconico 5x0 no GRE-NAL?",
+      "options": [
+        "2015",  // Primeira opção
+        "2017",  // Segunda opção
+        "2018",  // Terceira opção
+        "2020"   // Quarta opção
+      ],
+      "correctAnswer": 0 // A primeira opção é a correta
+    },
+    {
+      "questionText": "O Grêmio ganhou sua 5 Copa do Brasil quando?",
+      "options": [
+        "2016", // Primeira opção
+        "2018",  // Segunda opção
+        "2017",   // Terceira opção
+        "2020"   // Quarta opção
+      ],
+      "correctAnswer": 0 // primeira opção
+    },
+    {
+      "questionText": "Quem marcou o gol do título da Copa do Brasil de 2016?",
+      "options": [
+        "Geromel", // Primeira opção
+        "Everton Cebolinha", // Segunda opção
+        "Douglas", // Terceira opção
+        "Pedro Rocha"  // Quarta opção
+      ],
+      "correctAnswer": 1 // Segunda opção
+    },
+    {
+      "questionText": "Qual dupla de zaga foi essencial na sequência de títulos do Grêmio?",
+      "options": [
+        "Geromel e Kannemann", // Primeira opção
+        "Luan e Artur", // Segunda opção
+        "Jardel e Paulo Nunes", // Terceira opção
+        "Roger Machado e Renato Gaúcho"  // Quarta opção
+      ],
+      "correctAnswer": 0 //primeira opção
+    },
+    {
+      "questionText": "Quem é o maior ídolo do Grêmio?",
+      "options": [
+        "Cícero", // Primeira opção
+        "Jael", // Segunda opção
+        "Renato Gaúcho", // Terceira opção
+        "Felipe Scolari"  // Quarta opção
+      ],
+      "correctAnswer": 2 // terceira opção
+    },
+    {
+      "questionText": "Quantas vezes o Grêmio ganhou a Recopa Sul-Americana?",
+      "options": [
+        "2", // Primeira opção
+        "1", // Segunda opção
+        "0", // Terceira opção
+        "3"  // Quarta opção
+      ],
+      "correctAnswer": 0 // Primeira opção
+    },
+    {
+      "questionText": "Em que ano o Grêmio foi fundado?",
+      "options": [
+        "1901", // Primeira opção
+        "1903", // Segunda opção
+        "1910", // Terceira opção
+        "1920"  // Quarta opção
+      ],
+      "correctAnswer": 1 // Segunda opção
+    },
+    {
+      "questionText": "Como o Grêmio é conhecido?",
+      "options": [
+        "Tricolor Paulista", // Primeira opção
+        "Gigante da Colina", // Segunda opção
+        "Imortal Tricolor", // Terceira opção
+        "Furacão"  // Quarta opção
+      ],
+      "correctAnswer": 2 //Terceira opção
+    },
+    {
+      "questionText": "Em que ano o Grêmio venceu o Mundial de Clubes",
+      "options": [
+        "1983",   // Primeira opção
+        "1985²",  // Segunda opção
+        "1995",  // Terceira opção
+        "2001"  // Quarta opção
+      ],
+      "correctAnswer": 0 // primeira opção
+    },
+    {
+      "questionText": "Quem era o técnico do Grêmio na conquista da Libertadores de 2017?",
+      "options": [
+        "Luiz Felipe Scolari",  // Primeira opção
+        "Renato Portaluppi",  // Segunda opção
+        "Tite",  // Terceira opção
+        "Mano Menezes"  // Quarta opção
+      ],
+      "correctAnswer": 1 //segunda opção
+    },
+    {
+      "questionText": "Qual jogador ficou conhecido como 'Diabo Loiro' e é um dos ídolos do Grêmio?",
+      "options": [
+        "Tarciso", // Primeira opção
+        "Alcindo", // Segunda opção
+        "Tesourinha", // Terceira opção
+        "Paulo Nunes"  // Quarta opção
+      ],
+      "correctAnswer": 3 // quarta opção
+    },
+    {
+      "questionText": "Qual foi o placar da histórica 'Batalha do Aflitos' em 2005?",
+      "options": [
+        "1x0", // Primeira opção
+        "2x1", // Segunda opção
+        "3x2", // Terceira opção
+        "0x0"  // Quarta opção
+      ],
+      "correctAnswer": 0 // Primeirq opção
+    },
+    {
+      "questionText": "Em que ano o Grêmio conquistou sua primeira Copa do Brasil?",
+      "options": [
+        "1989", // Primeira opção
+        "1994", // Segunda opção
+        "1997", // Terceira opção
+        "2001"  // Quarta opção
+      ],
+      "correctAnswer": 0// primeira opção
     }
   ]
 };
@@ -163,10 +163,10 @@ function loadQuestion(questionIndex) {
   const questionData = questionsData.questions[questionIndex]; // Pega os dados da pergunta atual
 
   // Define o texto da pergunta no elemento HTML com id 'question-text'
-  document.getElementById('question-text').innerText = questionData.questionText;
+  document.getElementById('Questão-texto').innerText = questionData.questionText;
 
   // Mostra o número da pergunta (começando de 1)
-  document.getElementById('question-number').innerText = questionIndex + 1;
+  document.getElementById('Questão-numero').innerText = questionIndex + 1;
 
   const alternativesContainer = document.getElementById('alternativas'); // Contêiner das opções de resposta
   alternativesContainer.innerHTML = ''; // Limpa o contêiner de alternativas
