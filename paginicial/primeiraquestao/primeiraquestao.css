@@ -76,10 +76,10 @@ body {
     height: 290px;
     margin-top: 50px;
     margin-left: 155px;
-    display: block;
-    float:left
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
-
 
 .alternativa {
     width: 480px;
@@ -115,3 +115,4 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     color: #f7f7f7;
 }
+
