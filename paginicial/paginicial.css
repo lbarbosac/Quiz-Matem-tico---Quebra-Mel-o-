@@ -21,7 +21,7 @@ body {
     cursor: pointer;
     transition: all .5s ease-in-out; 
     box-shadow: 2px 5px 4px #444;
-    border-radius: 10px;
+    border-radius: 9px;
 }
  
 button:hover {
