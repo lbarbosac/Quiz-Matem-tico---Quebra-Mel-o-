@@ -54,7 +54,7 @@ body {
     margin-top: 10px;
 }
 
-.pergunta {
+.container-pergunta {
     width: 73%;
     height: 90px;
     display: block;
@@ -63,15 +63,17 @@ body {
     margin-left: -91px;
     border-radius: 8px;
     padding: 10px;
+    background-color: rgb(240, 176, 58);
 }
 
-.txtPergunta {
+#pergunta {
     color: #00f;
+    background-color: #29292b;
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.alternativas {
+.container-alternativa {
     width: 80%;
     height: 290px;
     margin-top: 50px;
@@ -79,9 +81,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    background-color: orange;
 }
 
-.alternativa {
+label {
     width: 480px;
     height: 100px;
     background-color: #00f;
@@ -96,7 +99,6 @@ body {
     padding: 10px;
     box-shadow: 8px 8px 12px #777;
     cursor: pointer;
-    float: left;
 }
 
 .alternativa:hover {
