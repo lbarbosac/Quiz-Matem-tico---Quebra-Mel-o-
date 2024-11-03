@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#iconeCerebro {
+    width: 84px;
+    height: 66px;
+    margin-left: -890px;
+    margin-top: 10px;
+}
+
+#tituloQuebra {
+    font-size: 40px;
+    color: #00f;
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#tituloMelao {
+    font-size: 40px;
+    color: #000;
+    float: left;
+    margin-top: 15px;
+}
+
+.bolinhaQuestao {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #00f;
+    color: #f7f7f7;
+    float: left;
+    margin-top: 100px;
+    margin-left: -220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroQuestao {
+    font-size: 40px;
+    color: #f7f7f7;
+}
+
+.pergunta {
+    width: 73%;
+    height: 90px;
+    margin-top: 100px;
+    margin-left: -91px;
+    padding: 10px;
+}
+
+.textoPergunta {
+    color: #00f;
+    font-size: 40px;
+}
+
+.alternativas {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 155px;
+}
+
+.alternativa {
+    width: 480px;
+    height: 100px;
+    background-color: #00f;
+    color: #ffffff;
+    border: 3px solid #000;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.alternativa:hover {
+    background-color: #0056b3;
+}
+
+button.alternativa {
+    border: none;
+    font-family: Arial, sans-serif;
+}
+
+.resultado {
+    display: none;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#pontuacao {
+    font-size: 30px;
+    color: #00f;
+}
+
+#reiniciar {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#reiniciar:hover {
+    background-color: #0056b3;
+}
