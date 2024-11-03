@@ -9,7 +9,7 @@ body {
     background-color: #f7f7f7;
 }
 
-#icone-cerebro {
+#icone-bola{
     width: 95px;
     height: 89px;
     margin-left: -890px;
@@ -30,6 +30,7 @@ body {
     color: #000;
     float: left;
     margin-top: 15px;
+    margin-left: 6px;
 }
 
 .container-numero-questao {
