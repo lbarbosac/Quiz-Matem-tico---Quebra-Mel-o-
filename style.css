@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+#iconeCerebro {
+    width: 84px;
+    height: 66px;
+    margin-left: -890px;
+    margin-top: 10px;
+}
+
+#tituloQuebra {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #00f;
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#tituloMelao {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #000;
+    display: block;
+    float: left;
+    margin-top: 15px;
+}
+
+.bolinhaQuestao {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #00f;
+    color: #f7f7f7;
+    display: block;
+    float: left;
+    margin-top: 100px;
+    margin-left: -220px;
+}
+
+.numeroQuestao {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f7f7f7;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pergunta {
+    width: 73%;
+    height: 90px;
+    display: block;
+    float: left;
+    margin-top: 100px;
+    margin-left: -91px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.textoPergunta {
+    color: #00f;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.alternativas {
+    width: 80%;
+    height: 290px;
+    margin-top: 50px;
+    margin-left: 155px;
+    display: block;
+    float: left;
+}
+
+.alternativa {
+    width: 480px;
+    height: 100px;
+    background-color: #00f;
+    color: #ffffff;
+    border: solid 3px #000;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 8px 8px 12px #777;
+    cursor: pointer;
+    float: left;
+    transition: background-color 0.3s ease;
+}
+
+.alternativa:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f7f7f7;
+}
