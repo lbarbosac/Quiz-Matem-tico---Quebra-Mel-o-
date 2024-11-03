@@ -1,79 +1,149 @@
-// Variáveis globais
-let questoesData = [];
-let indiceQuestaoAtual = 0;
-let pontuacao = 0;
-
-// Função para carregar a questão
-function carregarQuestao(indiceQuestao) {
-    const questaoData = questoesData[indiceQuestao];
-    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
-    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
-
-    const containerAlternativas = document.getElementById('alternativas');
-    containerAlternativas.innerHTML = ''; // Limpa as opções anteriores
-
-    // Cria botões para cada alternativa
-    questaoData.opcoes.forEach((opcao, indice) => {
-        const alternativaButton = document.createElement('button');
-        alternativaButton.classList.add('alternativa');
-        alternativaButton.innerText = opcao;
-
-        // Lógica de verificação de resposta
-        alternativaButton.addEventListener('click', function () {
-            if (indice === questaoData.respostaCorreta) {
-                alternativaButton.style.backgroundColor = 'green';
-                alert('Correto!');
-                pontuacao++;
-                proximaQuestao();
-            } else {
-                alternativaButton.style.backgroundColor = 'red';
-                alert(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`);
-                proximaQuestao();
-            }
-        });
-
-        containerAlternativas.appendChild(alternativaButton);
-    });
-}
-
-// Função para carregar a próxima questão
-function proximaQuestao() {
-    setTimeout(() => {
-        if (indiceQuestaoAtual < questoesData.length - 1) {
-            indiceQuestaoAtual++;
-            carregarQuestao(indiceQuestaoAtual);
+const dadosPerguntas = {
+    perguntas: [
+      {
+        textoPergunta: "Qual time tem a maior quantidade de títulos da Copa Libertadores?",
+        opcoes: ["Grêmio", "Flamengo", "Palmeiras", "Internacional"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Qual é o principal rival do Internacional?",
+        opcoes: ["Corinthians", "Grêmio", "Flamengo", "Palmeiras"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Em que ano o Flamengo venceu a Copa Libertadores pela primeira vez?",
+        opcoes: ["1980", "1981", "1982", "1983"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Qual time é conhecido como Verdão?",
+        opcoes: ["Juventude", "Palmeiras", "Atlético Mineiro", "Grêmio"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Qual jogador é ídolo histórico do Corinthians?",
+        opcoes: ["Ronaldo", "Pelé", "Socrates", "Zico"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Quantos títulos do Brasileirão o Grêmio tem?",
+        opcoes: ["1", "2", "3", "4"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Qual estádio é conhecido como Maracanã?",
+        opcoes: ["Beira-Rio", "Morumbi", "Mineirão", "Maracanã"],
+        respostaCorreta: 3
+      },
+      {
+        textoPergunta: "Qual time gaúcho joga no Alfredo Jaconi?",
+        opcoes: ["Internacional", "Juventude", "Grêmio", "Brasil de Pelotas"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Em que ano o Atlético Mineiro venceu a Copa Libertadores?",
+        opcoes: ["2010", "2012", "2013", "2015"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Qual desses times é conhecido como Mengão?",
+        opcoes: ["Corinthians", "Palmeiras", "Flamengo", "Atlético Mineiro"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Qual é o mascote do Palmeiras?",
+        opcoes: ["Galo", "Porco", "Urubu", "Mosqueteiro"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Qual jogador é conhecido como Rei do Drible no Grêmio?",
+        opcoes: ["Ronaldinho Gaúcho", "Pelé", "Zico", "Socrates"],
+        respostaCorreta: 0
+      },
+      {
+        textoPergunta: "Qual time venceu o Brasileirão de 2021?",
+        opcoes: ["Flamengo", "Atlético Mineiro", "Corinthians", "Palmeiras"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Quantos títulos de Copa do Brasil tem o Internacional?",
+        opcoes: ["1", "2", "3", "4"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Qual time tem o apelido de Timão?",
+        opcoes: ["Grêmio", "Internacional", "Corinthians", "Atlético Mineiro"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Em que estádio o Internacional joga?",
+        opcoes: ["Maracanã", "Beira-Rio", "Arena Corinthians", "Mineirão"],
+        respostaCorreta: 1
+      },
+      {
+        textoPergunta: "Qual desses jogadores é um ídolo histórico do Palmeiras?",
+        opcoes: ["Pelé", "Zico", "Ademir da Guia", "Socrates"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Quantos títulos de Libertadores tem o Grêmio?",
+        opcoes: ["1", "2", "3", "4"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Qual time tem a Arena do Grêmio como estádio?",
+        opcoes: ["Palmeiras", "Juventude", "Grêmio", "Atlético Mineiro"],
+        respostaCorreta: 2
+      },
+      {
+        textoPergunta: "Qual desses times é conhecido como Galo?",
+        opcoes: ["Atlético Mineiro", "Corinthians", "Flamengo", "Internacional"],
+        respostaCorreta: 0
+      }
+    ]
+  };
+  
+  let indicePerguntaAtual = 0;
+  
+  function carregarPergunta(indicePergunta) {
+    const perguntaAtual = dadosPerguntas.perguntas[indicePergunta];
+    document.getElementById("texto-pergunta").innerText = perguntaAtual.textoPergunta;
+    document.getElementById("numero-questao").innerText = indicePergunta + 1;
+  
+    const containerAlternativas = document.getElementById("container-alternativas");
+    containerAlternativas.innerHTML = "";
+  
+    perguntaAtual.opcoes.forEach((opcao, indice) => {
+      const alternativaDiv = document.createElement("div");
+      alternativaDiv.classList.add("alternativa");
+      alternativaDiv.innerText = opcao;
+  
+      alternativaDiv.addEventListener("click", function () {
+        if (indice === perguntaAtual.respostaCorreta) {
+          alternativaDiv.classList.add("correta");
+          setTimeout(() => carregarProximaPergunta(), 1000);
         } else {
-            exibirPontuacao();
+          alternativaDiv.classList.add("incorreta");
         }
-    }, 1000);
-}
-
-// Função para exibir a pontuação final
-function exibirPontuacao() {
-    document.getElementById('texto-questao').style.display = 'none';
-    document.getElementById('alternativas').style.display = 'none';
-    document.getElementById('resultado').style.display = 'block';
-    document.getElementById('pontuacao').innerText = `Pontuação: ${pontuacao} de ${questoesData.length}`;
-}
-
-// Função para reiniciar o quiz
-function reiniciarQuiz() {
-    indiceQuestaoAtual = 0;
-    pontuacao = 0;
-    document.getElementById('texto-questao').style.display = 'block';
-    document.getElementById('alternativas').style.display = 'block';
-    document.getElementById('resultado').style.display = 'none';
-    carregarQuestao(indiceQuestaoAtual);
-}
-
-// Evento de clique para reiniciar o quiz
-document.getElementById('reiniciar').addEventListener('click', reiniciarQuiz);
-
-// Carrega as questões do arquivo JSON e inicia o quiz
-fetch('script.json')
-    .then(response => response.json())
-    .then(dados => {
-        questoesData = dados.questoes;
-        carregarQuestao(indiceQuestaoAtual);
-    })
-    .catch(erro => console.error('Erro ao carregar as questões:', erro));
+      });
+  
+      containerAlternativas.appendChild(alternativaDiv);
+    });
+  }
+  
+  function carregarProximaPergunta() {
+    indicePerguntaAtual++;
+    if (indicePerguntaAtual < dadosPerguntas.perguntas.length) {
+      carregarPergunta(indicePerguntaAtual);
+    } else {
+      alert("Quiz finalizado! Clique em 'Reiniciar' para recomeçar.");
+    }
+  }
+  
+  function reiniciarQuiz() {
+    indicePerguntaAtual = 0;
+    carregarPergunta(indicePerguntaAtual);
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => carregarPergunta(indicePerguntaAtual));
+  

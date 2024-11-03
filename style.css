@@ -1,3 +1,4 @@
+/* Estilos */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +7,16 @@
 
 body {
     background-color: #f7f7f7;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-#iconeCerebro {
-    width: 84px;
-    height: 66px;
+#icone-cerebro {
+    width: 101px;
+    height: 80px;
     margin-left: -890px;
-    margin-top: 10px;
 }
 
-#tituloQuebra {
+#titulo-quebra {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color: #00f;
     float: left;
@@ -24,14 +24,15 @@ body {
     margin-left: 20px;
 }
 
-#tituloMelao {
+#titulo-melao {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color: #000;
     float: left;
     margin-top: 15px;
 }
 
-.bolinhaQuestao {
+.container-numero-questao {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -40,33 +41,37 @@ body {
     float: left;
     margin-top: 100px;
     margin-left: -220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.numeroQuestao {
+.numero-questao {
     font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
     color: #f7f7f7;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.pergunta {
+.container-pergunta {
     width: 73%;
     height: 90px;
+    float: left;
     margin-top: 100px;
     margin-left: -91px;
+    border-radius: 8px;
     padding: 10px;
 }
 
-.textoPergunta {
+.texto-pergunta {
     color: #00f;
     font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.alternativas {
+.container-alternativas {
     width: 80%;
     margin-top: 50px;
     margin-left: 155px;
+    float: left;
 }
 
 .alternativa {
@@ -74,45 +79,37 @@ body {
     height: 100px;
     background-color: #00f;
     color: #ffffff;
-    border: 3px solid #000;
-    margin: 10px;
-    font-size: 25px;
+    border: solid 3px #000;
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 25px; 
+    text-align: center;
+    padding: 10px;
+    box-shadow: 8px 8px 12px #777;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    float: left;
+    transition: background-color 0.3s;
 }
 
 .alternativa:hover {
     background-color: #0056b3;
 }
 
-button.alternativa {
-    border: none;
-    font-family: Arial, sans-serif;
+.alternativa.correta {
+    background-color: #28a745; /* Verde para correto */
 }
 
-.resultado {
-    display: none;
-    text-align: center;
-    margin-top: 100px;
+.alternativa.incorreta {
+    background-color: #dc3545; /* Vermelho para incorreto */
 }
 
-#pontuacao {
-    font-size: 30px;
-    color: #00f;
-}
-
-#reiniciar {
-    background-color: #00f;
-    color: #fff;
-    border: none;
+#botao-reiniciar {
+    clear: both;
+    display: block;
+    margin: 50px auto;
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-#reiniciar:hover {
-    background-color: #0056b3;
 }

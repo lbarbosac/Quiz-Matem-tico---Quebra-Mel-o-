@@ -1,54 +1,105 @@
 {
-    "questoes": [
-        {
-            "textoPergunta": "Qual ano o Grêmio ganhou sua primeira Libertadores?",
-            "opcoes": ["1983", "1995", "2017", "2023"],
-            "respostaCorreta": 0
-        },
-        {
-            "textoPergunta": "Quantas Copas do Brasil o Grêmio tem?",
-            "opcoes": ["3", "6", "7", "5"],
-            "respostaCorreta": 3
-        },
-        {
-            "textoPergunta": "Em que ano rolou o icônico 5x0 no GRE-NAL?",
-            "opcoes": ["2015", "2017", "2018", "2020"],
-            "respostaCorreta": 0
-        },
-        {
-            "textoPergunta": "O Grêmio ganhou sua 5ª Copa do Brasil quando?",
-            "opcoes": ["2016", "2018", "2017", "2020"],
-            "respostaCorreta": 0
-        },
-        {
-            "textoPergunta": "Quem marcou o gol do título da Copa do Brasil de 2016?",
-            "opcoes": ["Geromel", "Everton Cebolinha", "Douglas", "Pedro Rocha"],
-            "respostaCorreta": 1
-        },
-        {
-            "textoPergunta": "Qual dupla de zaga foi essencial na sequência de títulos do Grêmio?",
-            "opcoes": ["Geromel e Kannemann", "Luan e Artur", "Jardel e Paulo Nunes", "Roger Machado e Renato Gaúcho"],
-            "respostaCorreta": 0
-        },
-        {
-            "textoPergunta": "Quem é o maior ídolo do Grêmio?",
-            "opcoes": ["Cícero", "Jael", "Renato Gaúcho", "Felipe Scolari"],
-            "respostaCorreta": 2
-        },
-        {
-            "textoPergunta": "Quantas vezes o Grêmio ganhou a Recopa Sul-Americana?",
-            "opcoes": ["2", "1", "0", "3"],
-            "respostaCorreta": 0
-        },
-        {
-            "textoPergunta": "Em que ano o Grêmio foi fundado?",
-            "opcoes": ["1901", "1903", "1910", "1920"],
-            "respostaCorreta": 1
-        },
-        {
-            "textoPergunta": "Como o Grêmio é conhecido?",
-            "opcoes": ["Tricolor Paulista", "Gigante da Colina", "Imortal Tricolor", "Furacão"],
-            "respostaCorreta": 2
-        }
+    "questions": [
+      {
+        "questionText": "Qual time tem a maior quantidade de títulos da Copa Libertadores?",
+        "options": ["Grêmio", "Flamengo", "Palmeiras", "Internacional"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Qual é o principal rival do Internacional?",
+        "options": ["Corinthians", "Grêmio", "Flamengo", "Palmeiras"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Em que ano o Flamengo venceu a Copa Libertadores pela primeira vez?",
+        "options": ["1980", "1981", "1982", "1983"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Qual time é conhecido como Verdão?",
+        "options": ["Juventude", "Palmeiras", "Atlético Mineiro", "Grêmio"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Qual jogador é ídolo histórico do Corinthians?",
+        "options": ["Ronaldo", "Pelé", "Socrates", "Zico"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Quantos títulos do Brasileirão o Grêmio tem?",
+        "options": ["1", "2", "3", "4"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Qual estádio é conhecido como Maracanã?",
+        "options": ["Beira-Rio", "Morumbi", "Mineirão", "Maracanã"],
+        "correctAnswer": 3
+      },
+      {
+        "questionText": "Qual time gaúcho joga no Alfredo Jaconi?",
+        "options": ["Internacional", "Juventude", "Grêmio", "Brasil de Pelotas"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Em que ano o Atlético Mineiro venceu a Copa Libertadores?",
+        "options": ["2010", "2012", "2013", "2015"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Qual desses times é conhecido como Mengão?",
+        "options": ["Corinthians", "Palmeiras", "Flamengo", "Atlético Mineiro"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Qual é o mascote do Palmeiras?",
+        "options": ["Galo", "Porco", "Urubu", "Mosqueteiro"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Qual jogador é conhecido como Rei do Drible no Grêmio?",
+        "options": ["Ronaldinho Gaúcho", "Pelé", "Zico", "Socrates"],
+        "correctAnswer": 0
+      },
+      {
+        "questionText": "Qual time venceu o Brasileirão de 2021?",
+        "options": ["Flamengo", "Atlético Mineiro", "Corinthians", "Palmeiras"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Quantos títulos de Copa do Brasil tem o Internacional?",
+        "options": ["1", "2", "3", "4"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Qual time tem o apelido de Timão?",
+        "options": ["Grêmio", "Internacional", "Corinthians", "Atlético Mineiro"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Em que estádio o Internacional joga?",
+        "options": ["Maracanã", "Beira-Rio", "Arena Corinthians", "Mineirão"],
+        "correctAnswer": 1
+      },
+      {
+        "questionText": "Qual desses jogadores é um ídolo histórico do Palmeiras?",
+        "options": ["Pelé", "Zico", "Ademir da Guia", "Socrates"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Quantos títulos de Libertadores tem o Grêmio?",
+        "options": ["1", "2", "3", "4"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Qual time tem a Arena do Grêmio como estádio?",
+        "options": ["Palmeiras", "Juventude", "Grêmio", "Atlético Mineiro"],
+        "correctAnswer": 2
+      },
+      {
+        "questionText": "Qual desses times é conhecido como Galo?",
+        "options": ["Atlético Mineiro", "Corinthians", "Flamengo", "Internacional"],
+        "correctAnswer": 0
+      }
     ]
-}
+  }
+  
