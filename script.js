@@ -22,8 +22,8 @@ const dadosPerguntas = {
       },
       {
         textoPergunta: "Qual jogador é ídolo histórico do Corinthians?",
-        opcoes: ["Ronaldo", "Pelé", "Socrates", "Zico"],
-        respostaCorreta: 2
+        opcoes: ["Ronaldo", "Pelé", "Paulo Nunes", "Zico"],
+        respostaCorreta: 0
       },
       {
         textoPergunta: "Quantos títulos do Brasileirão o Grêmio tem?",
