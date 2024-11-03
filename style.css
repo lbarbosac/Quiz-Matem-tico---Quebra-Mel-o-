@@ -6,6 +6,7 @@
 
 body {
     background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #iconeCerebro {
@@ -16,20 +17,16 @@ body {
 }
 
 #tituloQuebra {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color: #00f;
-    display: block;
     float: left;
     margin-top: 15px;
     margin-left: 20px;
 }
 
 #tituloMelao {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color: #000;
-    display: block;
     float: left;
     margin-top: 15px;
 }
@@ -37,47 +34,39 @@ body {
 .bolinhaQuestao {
     width: 80px;
     height: 80px;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #00f;
     color: #f7f7f7;
-    display: block;
     float: left;
     margin-top: 100px;
     margin-left: -220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .numeroQuestao {
     font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
     color: #f7f7f7;
-    text-align: center;
-    margin-top: 10px;
 }
 
 .pergunta {
     width: 73%;
     height: 90px;
-    display: block;
-    float: left;
     margin-top: 100px;
     margin-left: -91px;
-    border-radius: 8px;
     padding: 10px;
 }
 
 .textoPergunta {
     color: #00f;
     font-size: 40px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .alternativas {
     width: 80%;
-    height: 290px;
     margin-top: 50px;
     margin-left: 155px;
-    display: block;
-    float: left;
 }
 
 .alternativa {
@@ -85,17 +74,11 @@ body {
     height: 100px;
     background-color: #00f;
     color: #ffffff;
-    border: solid 3px #000;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 3px solid #000;
+    margin: 10px;
     font-size: 25px;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 8px 8px 12px #777;
     cursor: pointer;
-    float: left;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
@@ -103,15 +86,33 @@ body {
     background-color: #0056b3;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    text-align: center;
+button.alternativa {
+    border: none;
+    font-family: Arial, sans-serif;
 }
 
-p {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f7f7f7;
+.resultado {
+    display: none;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#pontuacao {
+    font-size: 30px;
+    color: #00f;
+}
+
+#reiniciar {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#reiniciar:hover {
+    background-color: #0056b3;
 }

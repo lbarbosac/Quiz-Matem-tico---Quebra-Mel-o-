@@ -1,80 +1,54 @@
 {
     "questoes": [
-      {
-        "textoPergunta": "Qual ano o Grêmio ganhou sua primeira Libertadores?",
-        "opcoes": ["1983", "1995", "2017", "2023"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "Quantas Copas do Brasil o Grêmio tem?",
-        "opcoes": ["3", "6", "7", "5"],
-        "respostaCorreta": 3
-      },
-      {
-        "textoPergunta": "Em que ano rolou o icônico 5x0 no GRE-NAL?",
-        "opcoes": ["2015", "2017", "2018", "2020"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "O Grêmio ganhou sua 5ª Copa do Brasil quando?",
-        "opcoes": ["2016", "2018", "2017", "2020"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "Quem marcou o gol do título da Copa do Brasil de 2016?",
-        "opcoes": ["Geromel", "Everton Cebolinha", "Douglas", "Pedro Rocha"],
-        "respostaCorreta": 1
-      },
-      {
-        "textoPergunta": "Qual dupla de zaga foi essencial na sequência de títulos do Grêmio?",
-        "opcoes": ["Geromel e Kannemann", "Luan e Artur", "Jardel e Paulo Nunes", "Roger Machado e Renato Gaúcho"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "Quem é o maior ídolo do Grêmio?",
-        "opcoes": ["Cícero", "Jael", "Renato Gaúcho", "Felipe Scolari"],
-        "respostaCorreta": 2
-      },
-      {
-        "textoPergunta": "Quantas vezes o Grêmio ganhou a Recopa Sul-Americana?",
-        "opcoes": ["2", "1", "0", "3"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "Em que ano o Grêmio foi fundado?",
-        "opcoes": ["1901", "1903", "1910", "1920"],
-        "respostaCorreta": 1
-      },
-      {
-        "textoPergunta": "Como o Grêmio é conhecido?",
-        "opcoes": ["Tricolor Paulista", "Gigante da Colina", "Imortal Tricolor", "Furacão"],
-        "respostaCorreta": 2
-      },
-      {
-        "textoPergunta": "Em que ano o Grêmio venceu o Mundial de Clubes?",
-        "opcoes": ["1983", "1985", "1995", "2001"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "Quem era o técnico do Grêmio na conquista da Libertadores de 2017?",
-        "opcoes": ["Luiz Felipe Scolari", "Renato Portaluppi", "Tite", "Mano Menezes"],
-        "respostaCorreta": 1
-      },
-      {
-        "textoPergunta": "Qual jogador ficou conhecido como 'Diabo Loiro'?",
-        "opcoes": ["Tarciso", "Alcindo", "Tesourinha", "Paulo Nunes"],
-        "respostaCorreta": 3
-      },
-      {
-        "textoPergunta": "Qual foi o placar da histórica 'Batalha do Aflitos' em 2005?",
-        "opcoes": ["1x0", "2x1", "3x2", "0x0"],
-        "respostaCorreta": 0
-      },
-      {
-        "textoPergunta": "Em que ano o Grêmio conquistou sua primeira Copa do Brasil?",
-        "opcoes": ["1989", "1994", "1997", "2001"],
-        "respostaCorreta": 0
-      }
+        {
+            "textoPergunta": "Qual ano o Grêmio ganhou sua primeira Libertadores?",
+            "opcoes": ["1983", "1995", "2017", "2023"],
+            "respostaCorreta": 0
+        },
+        {
+            "textoPergunta": "Quantas Copas do Brasil o Grêmio tem?",
+            "opcoes": ["3", "6", "7", "5"],
+            "respostaCorreta": 3
+        },
+        {
+            "textoPergunta": "Em que ano rolou o icônico 5x0 no GRE-NAL?",
+            "opcoes": ["2015", "2017", "2018", "2020"],
+            "respostaCorreta": 0
+        },
+        {
+            "textoPergunta": "O Grêmio ganhou sua 5ª Copa do Brasil quando?",
+            "opcoes": ["2016", "2018", "2017", "2020"],
+            "respostaCorreta": 0
+        },
+        {
+            "textoPergunta": "Quem marcou o gol do título da Copa do Brasil de 2016?",
+            "opcoes": ["Geromel", "Everton Cebolinha", "Douglas", "Pedro Rocha"],
+            "respostaCorreta": 1
+        },
+        {
+            "textoPergunta": "Qual dupla de zaga foi essencial na sequência de títulos do Grêmio?",
+            "opcoes": ["Geromel e Kannemann", "Luan e Artur", "Jardel e Paulo Nunes", "Roger Machado e Renato Gaúcho"],
+            "respostaCorreta": 0
+        },
+        {
+            "textoPergunta": "Quem é o maior ídolo do Grêmio?",
+            "opcoes": ["Cícero", "Jael", "Renato Gaúcho", "Felipe Scolari"],
+            "respostaCorreta": 2
+        },
+        {
+            "textoPergunta": "Quantas vezes o Grêmio ganhou a Recopa Sul-Americana?",
+            "opcoes": ["2", "1", "0", "3"],
+            "respostaCorreta": 0
+        },
+        {
+            "textoPergunta": "Em que ano o Grêmio foi fundado?",
+            "opcoes": ["1901", "1903", "1910", "1920"],
+            "respostaCorreta": 1
+        },
+        {
+            "textoPergunta": "Como o Grêmio é conhecido?",
+            "opcoes": ["Tricolor Paulista", "Gigante da Colina", "Imortal Tricolor", "Furacão"],
+            "respostaCorreta": 2
+        }
     ]
-  }
-  
+}
