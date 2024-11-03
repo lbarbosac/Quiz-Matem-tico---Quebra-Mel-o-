@@ -2,8 +2,8 @@ const dadosPerguntas = {
     perguntas: [
       {
         textoPergunta: "Qual time tem a maior quantidade de títulos da Copa Libertadores?",
-        opcoes: ["Grêmio", "Flamengo", "Palmeiras", "Internacional"],
-        respostaCorreta: 2
+        opcoes: ["Grêmio", "Cruzeiro", "Fluminense", "Internacional"],
+        respostaCorreta: 0
       },
       {
         textoPergunta: "Qual é o principal rival do Internacional?",
@@ -28,10 +28,10 @@ const dadosPerguntas = {
       {
         textoPergunta: "Quantos títulos do Brasileirão o Grêmio tem?",
         opcoes: ["1", "2", "3", "4"],
-        respostaCorreta: 2
+        respostaCorreta: 1
       },
       {
-        textoPergunta: "Qual estádio é conhecido como Maracanã?",
+        textoPergunta: "Qual estádio o Flamengo joga como sua casa?",
         opcoes: ["Beira-Rio", "Morumbi", "Mineirão", "Maracanã"],
         respostaCorreta: 3
       },
@@ -46,7 +46,7 @@ const dadosPerguntas = {
         respostaCorreta: 2
       },
       {
-        textoPergunta: "Qual desses times é conhecido como Mengão?",
+        textoPergunta: "Qual desses times é conhecido como urubu?",
         opcoes: ["Corinthians", "Palmeiras", "Flamengo", "Atlético Mineiro"],
         respostaCorreta: 2
       },
@@ -68,7 +68,7 @@ const dadosPerguntas = {
       {
         textoPergunta: "Quantos títulos de Copa do Brasil tem o Internacional?",
         opcoes: ["1", "2", "3", "4"],
-        respostaCorreta: 1
+        respostaCorreta: 0
       },
       {
         textoPergunta: "Qual time tem o apelido de Timão?",
@@ -91,7 +91,7 @@ const dadosPerguntas = {
         respostaCorreta: 2
       },
       {
-        textoPergunta: "Qual time tem a Arena do Grêmio como estádio?",
+        textoPergunta: "Qual time tem a Arena como estádio?",
         opcoes: ["Palmeiras", "Juventude", "Grêmio", "Atlético Mineiro"],
         respostaCorreta: 2
       },
