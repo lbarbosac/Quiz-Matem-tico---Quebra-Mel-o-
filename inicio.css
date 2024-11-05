@@ -1,0 +1,76 @@
+body {
+    background-color: #e8e8e8;
+} 
+
+#tituloQuebra {
+    font-size: 80px;
+    width: 20%;
+    margin-left: 540px;
+    margin-top: 50px;
+    font-family: "Jersey 10", sans-serif;
+    color: #0077ff;
+}
+
+#tituloMelao {
+    font-size: 80px;
+    width: 18%;
+    margin-left: 565px;
+    margin-top: -60px;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* AQUI É O BOTÃO */
+
+button {
+    --color: #0077ff;
+    font-family: inherit;
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 105px;
+    margin-left: 450px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+  }
+  
+  button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    border-radius: 10%;
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+  }
+  
+  button:hover::before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  
+  
+  
