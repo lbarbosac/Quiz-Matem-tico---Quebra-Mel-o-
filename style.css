@@ -9,36 +9,28 @@ body {
     background-color: #f7f7f7;
 }
 
-#icone-bola{
-    width: 95px;
-    height: 89px;
+#icone-cerebro {
+    width: 101px;
+    height: 80px;
     margin-left: -890px;
 }
 
 #titulo-quebra {
-    font-family: "Jersey 10", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color: #00f;
     float: left;
     margin-top: 15px;
     margin-left: 20px;
-    
 }
 
 #titulo-melao {
-    font-family: "Jersey 10", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color: #000;
     float: left;
     margin-top: 15px;
-    margin-left: 6px;
 }
-
-.jersey-10-regular {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
 
 .container-numero-questao {
     width: 80px;
@@ -48,8 +40,7 @@ body {
     color: #f7f7f7;
     float: left;
     margin-top: 100px;
-    margin-left: -142px;
-
+    margin-left: -220px;
 }
 
 .numero-questao {
@@ -57,8 +48,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     color: #f7f7f7;
     text-align: center;
-    margin-top: 15px;
-    margin-left: 1px;
+    margin-top: 10px;
 }
 
 .container-pergunta {
@@ -75,7 +65,6 @@ body {
     color: #00f;
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 108px;
 }
 
 .container-alternativas {
@@ -102,7 +91,6 @@ body {
     cursor: pointer;
     float: left;
     transition: background-color 0.3s;
-    cursor:pointer;
 }
 
 .alternativa:hover {
@@ -117,16 +105,20 @@ body {
     background-color: #dc3545; /* Vermelho para incorreto */
 }
 
+#container-resultado {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mensagem-resultado {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
 #botao-reiniciar {
-    clear: both;
-    display: block;
-    margin: 50px auto;
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
+    margin-top: 15px;
 }
-
-
-  
-
-

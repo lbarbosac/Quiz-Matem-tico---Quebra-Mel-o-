@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quebra Melão - Quiz de Futebol</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <img id="icone-bola" src="./img/pngwing.com.png" alt="">
+    <img id="icone-cerebro" src="img/icone-cerebro.png" alt="Cérebro">
     <h1 id="titulo-quebra">Quebra</h1>
     <h2 id="titulo-melao">Melão</h2>
-    
 
     <div class="container-numero-questao">
         <p class="numero-questao" id="numero-questao">1</p>
@@ -26,8 +22,12 @@
 
     <div class="container-alternativas" id="container-alternativas"></div>
     
-    <button id="botao-reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
-    
-    <script src="script.js"></script>
+    <!-- Mensagem de resultado e botão de reiniciar que aparecem somente ao final -->
+    <div id="container-resultado" style="display: none;">
+        <p id="mensagem-resultado"></p>
+        <button id="botao-reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+    </div>
+
+    <script src="quiz.js"></script>
 </body>
 </html>
