@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quebra Melão - Quiz de futebol</title>
+    <title>Quebra Melão - Quiz de Futebol</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
       <img id="iconecerebro" src="https://seeklogo.com/images/S/soccer-ball-logo-8CEB7AB716-seeklogo.com.png"> 
    <h1 id="Quebra">Quebra</h1> 
     <h2 id="Melao">Melão</h2>
@@ -18,5 +19,22 @@
 
 
 
+    <img id="icone-bola" src="https://images.vexels.com/content/234537/preview/flying-soccer-ball-081682.png" alt="Cérebro">
+    <h1 id="titulo-quebra">Quebra</h1>
+    <h2 id="titulo-melao">Melão</h2>
+
+    <div class="container-numero-questao">
+        <p class="numero-questao" id="numero-questao">1</p>
+    </div>
+    
+    <div class="container-pergunta">
+        <h1 class="texto-pergunta" id="texto-pergunta"></h1>
+    </div>
+
+    <div class="container-alternativas" id="container-alternativas"></div>
+    
+    <button id="botao-reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+    
+    <script src="script.js"></script>
 </body>
 </html>
