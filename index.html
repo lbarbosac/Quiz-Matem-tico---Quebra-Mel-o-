@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quebra Melão - Quiz de Futebol</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <img id="icone-cerebro" src="img/icone-cerebro.png" alt="Cérebro">
+    <img id="icone-cerebro" src="img/pngwing.com.png" alt="Cérebro">
     <h1 id="titulo-quebra">Quebra</h1>
     <h2 id="titulo-melao">Melão</h2>
 
     <div class="container-numero-questao">
         <p class="numero-questao" id="numero-questao">1</p>
     </div>
-    
+
     <div class="container-pergunta">
-        <h1 class="texto-pergunta" id="texto-pergunta"></h1>
+        <h1 class="texto-pergunta" id="texto-pergunta"></h1></h1>
     </div>
 
     <div class="container-alternativas" id="container-alternativas"></div>
-    
-    <!-- Mensagem de resultado e botão de reiniciar que aparecem somente ao final -->
-    <div id="container-resultado" style="display: none;">
-        <p id="mensagem-resultado"></p>
-        <button id="botao-reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
-    </div>
 
-    <script src="quiz.js"></script>
+    <div id="container-resultado" 
+        <h2 id="mensagem-resultado"></h2>
+        <button id="botao-reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+    </div> 
+
+    <div id="pontuacao">Pontuação: 0</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
