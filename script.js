@@ -154,14 +154,14 @@ fetch('script.json')
 }
 
 // Evento de clique para reiniciar o quiz
-document.getElementById('reiniciar').addEventListener('click', reiniciarQuiz);
+,document.getElementById('reiniciar').addEventListener('click', reiniciarQuiz)
 
 // Carrega as questões do arquivo JSON e inicia o quiz
-fetch('script.json')
+,fetch('script.json')
     .then(response => response.json())
     .then(dados => {
         questoesData = dados.questoes;
         carregarQuestao(indiceQuestaoAtual);
     })
-    .catch(erro => console.error('Erro ao carregar as questões:', erro));
-);
+    .catch(erro => console.error('Erro ao carregar as questões:', erro))
+)

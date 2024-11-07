@@ -23,8 +23,14 @@ body {
     font-family: "Jersey 10", sans-serif;
 }
 
-#tituloQuebra { color: #00f; margin-left: 20px; }
-#tituloMelao { color: #000; }
+#tituloQuebra { 
+    color: #00f; 
+    margin-left: 20px; 
+}
+
+#tituloMelao { 
+    color: #000; 
+}
 
 .bolinhaQuestao {
     width: 80px;
@@ -51,43 +57,6 @@ body {
     margin-top: 20px;
     width: 100%;
     text-align: center;
-}
-
-.janela-modal-erro {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: #0000009c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-}
-
-.modal {
-    width: 60%;
-    min-width: 450px;
-    min-height: 200px;
-    background-color: #fff;
-    backdrop-filter: blur(10px);
-    padding: 50px;
-    border-radius: 20px;
-}
-
-.fechar {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 0;
-    background-color: #e82a2a;
-    color: #ffffffff;
-    font-size: 20px;
-    cursor: pointer;
 }
 
 .alternativas {
