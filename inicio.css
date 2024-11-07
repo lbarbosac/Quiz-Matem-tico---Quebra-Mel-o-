@@ -38,7 +38,7 @@ button {
     cursor: pointer;
     margin-top: 105px;
     margin-left: 450px;
-    font-size: 17px;
+    font-size: 20px;
     z-index: 1;
     color: var(--color);
     border: 2px solid var(--color);

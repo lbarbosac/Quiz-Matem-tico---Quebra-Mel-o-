@@ -72,6 +72,43 @@ body {
     width: 100%;
 }
 
+.janela-modal-erro {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #0000009c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.fechar {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #e82a2a;
+    color: #ffffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .alternativas {
     width: 80%;
     margin-top: -25px;
@@ -104,8 +141,9 @@ footer {
     width: 100%;
     height: 55px;
     background-color: #00f;
-    margin-top: 140px;
+    margin-top: 370px;
     padding: 4.5px;
+    position: fixed;
 }
 
 h3 {
@@ -117,7 +155,7 @@ h3 {
 .resultado {
     display: none;
     text-align: center;
-    margin-top: 100px;
+    margin-top: -200px;
 }
 
 #pontuacao {
