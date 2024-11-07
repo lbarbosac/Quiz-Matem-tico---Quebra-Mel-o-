@@ -3,40 +3,48 @@ let questoesData = [];
 let indiceQuestaoAtual = 0;
 let pontuacao = 0;
 
-// Função para carregar a questão
+// Carrega os dados das questões do arquivo JSON e inicia o quiz
+fetch('script.json')
+    .then(response => response.json())
+    .then(dados => {
+        questoesData = dados.questoes;
+        carregarQuestao(indiceQuestaoAtual);
+    })
+    .catch(erro => console.error('Erro ao carregar as questões:', erro));
+
+// Função para carregar a questão atual
 function carregarQuestao(indiceQuestao) {
     const questaoData = questoesData[indiceQuestao];
     document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
     document.getElementById('numero-questao').innerText = indiceQuestao + 1;
 
     const containerAlternativas = document.getElementById('alternativas');
-    containerAlternativas.innerHTML = ''; // Limpa as opções anteriores
+    containerAlternativas.innerHTML = ''; // Limpa as alternativas anteriores
 
-    // Cria botões para cada alternativa
+    // Cria botões de alternativas
     questaoData.opcoes.forEach((opcao, indice) => {
         const alternativaButton = document.createElement('button');
         alternativaButton.classList.add('alternativa');
         alternativaButton.innerText = opcao;
 
-        // Lógica de verificação de resposta
-        alternativaButton.addEventListener('click', function () {
+        // Verifica se a resposta está correta e dá feedback
+        alternativaButton.addEventListener('click', () => {
             if (indice === questaoData.respostaCorreta) {
                 alternativaButton.style.backgroundColor = 'green';
                 alert('Correto!');
                 pontuacao++;
-                proximaQuestao();
             } else {
                 alternativaButton.style.backgroundColor = 'red';
                 alert(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`);
-                proximaQuestao();
             }
+            proximaQuestao();
         });
 
         containerAlternativas.appendChild(alternativaButton);
     });
 }
 
-// Função para carregar a próxima questão
+// Função para carregar a próxima questão ou exibir a pontuação final
 function proximaQuestao() {
     setTimeout(() => {
         if (indiceQuestaoAtual < questoesData.length - 1) {
@@ -45,7 +53,7 @@ function proximaQuestao() {
         } else {
             exibirPontuacao();
         }
-    }, 1000);
+    }, 500); // Pequeno delay para transição
 }
 
 // Função para exibir a pontuação final
@@ -56,8 +64,8 @@ function exibirPontuacao() {
     document.getElementById('pontuacao').innerText = `Pontuação: ${pontuacao} de ${questoesData.length}`;
 }
 
-// Função para reiniciar o quiz
-function reiniciarQuiz() {
+// Reinicia o quiz ao clicar no botão "Reiniciar"
+document.getElementById('reiniciar').addEventListener('click', () => {
     indiceQuestaoAtual = 0;
     pontuacao = 0;
     document.getElementById('texto-questao').style.display = 'block';
@@ -127,6 +135,7 @@ function reiniciarQuiz() {
     document.getElementById('alternativas').style.display = 'block';
     document.getElementById('resultado').style.display = 'none';
     carregarQuestao(indiceQuestaoAtual);
+<<<<<<< HEAD
 }
 
 // Evento de clique para reiniciar o quiz
@@ -156,3 +165,6 @@ fetch('script.json')
         carregarQuestao(indiceQuestaoAtual);
     })
     .catch(erro => console.error('Erro ao carregar as questões:', erro));
+=======
+});
+>>>>>>> 291cc0b892815ebad7d1612b4cc5bbbc59f63510
