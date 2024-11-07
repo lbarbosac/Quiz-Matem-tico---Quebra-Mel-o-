@@ -135,7 +135,6 @@ function reiniciarQuiz() {
     document.getElementById('alternativas').style.display = 'block';
     document.getElementById('resultado').style.display = 'none';
     carregarQuestao(indiceQuestaoAtual);
-<<<<<<< HEAD
 }
 
 // Evento de clique para reiniciar o quiz
@@ -165,6 +164,4 @@ fetch('script.json')
         carregarQuestao(indiceQuestaoAtual);
     })
     .catch(erro => console.error('Erro ao carregar as questões:', erro));
-=======
-});
->>>>>>> 291cc0b892815ebad7d1612b4cc5bbbc59f63510
+);
