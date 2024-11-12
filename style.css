@@ -46,40 +46,46 @@ body {
     }
 
 .pergunta { 
-    width: 73%; 
-    margin-top: 100px; 
+    width: 100%; 
+    margin-top: 90px; 
     padding: 10px; 
 }
 
 .textoPergunta { 
     color: #00f; 
-    font-size: 40px; 
+    font-size: 38px; 
     text-align: center;
     margin-top: -170px;
-    margin-left: 45px; 
-    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -80px; 
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 
 .alternativas { 
-    width: 80%; 
+    height: 100%;
+    width: 90%; 
     margin-top: 20px; 
-    margin-left: 120px;
-    align-items: center;
+    margin-left: 200px;
+    background-color: purple;
+    display: grid;
+    grid-template-columns: ;
 }
+
 .alternativa { 
-    width: 80%; 
-    max-width: 400px; 
+    width: 80%;  
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
     padding: 15px; 
     background-color: #00f; 
-    color: #ffffff; 
+    color: #f7f7f7; 
     border: 3px solid #000;
-     margin: 10px; 
-     font-size: 20px; 
-     cursor: pointer; 
-     border-radius: 8px; 
-     text-align: center; 
-     transition: background-color 0.3s ease; }
+    margin: 10px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    text-align: center; 
+    transition: background-color 0.3s ease; }
 
      .alternativa:hover { 
     background-color: #0056b3; 
@@ -87,11 +93,18 @@ body {
 
 footer { 
     width: 100%; 
-    height: 55px; 
+    height: 45px; 
     background-color: #00f; 
-    margin-top: 370px; 
-    padding: 4.5px; 
-    position: fixed; }
+    color: #f7f7f7;
+    margin-top: 142px; 
+    padding: 10px; 
+}
+
+h3 {
+    margin-left: 410px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+}
 
     
 .resultado { 
