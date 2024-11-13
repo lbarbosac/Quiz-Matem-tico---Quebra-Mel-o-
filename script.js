@@ -1,102 +1,89 @@
-const dadosPerguntas = {
-    perguntas: [
-        { textoPergunta: "Qual time tem a maior quantidade de títulos da Copa Libertadores?", 
-          opcoes: ["Grêmio", "Internacional", "Vasco", "Fluminense"], 
-          respostaCorreta: 0 },
-        { textoPergunta: "Em que ano o Flamengo venceu a Copa Libertadores pela primeira vez?", 
-          opcoes: ["1980", "1981", "1982", "1983"], 
-          respostaCorreta: 1 },
-        { textoPergunta: "Qual jogador é ídolo histórico do Corinthians?", 
-          opcoes: ["Ronaldo", "Pelé", "Paulo Nunes", "Zico"], 
-          respostaCorreta: 0 },
-        { textoPergunta: "Qual time gaúcho joga no Alfredo Jaconi?", 
-          opcoes: ["Internacional", "Juventude", "Grêmio", "Brasil de Pelotas"], 
-          respostaCorreta: 1 },
-        { textoPergunta: "Em que ano o Grêmio venceu a sua ultima Copa Libertadores?", 
-          opcoes: ["2010", "2012", "2017", "2015"], 
-          respostaCorreta: 2 },
-        { textoPergunta: "Qual time venceu o Brasileirão de 2021?", 
-          opcoes: ["Flamengo", "Atlético Mineiro", "Corinthians", "Palmeiras"], 
-          respostaCorreta: 1 },
-        { textoPergunta: "Quantos títulos de Copa do Brasil tem o Internacional?", 
-          opcoes: ["1", "2", "3", "4"], 
-          respostaCorreta: 0 },
-        { textoPergunta: "Em que estádio o Internacional joga?", 
-          opcoes: ["Maracanã", "Beira-Rio", "Arena Corinthians", "Mineirão"], 
-          respostaCorreta: 1 },
-        { textoPergunta: "Qual desses jogadores é um ídolo histórico do Grêmio?", 
-          opcoes: ["Pelé", "Zico", "Renato Gaucho", "Socrates"], 
-          respostaCorreta: 2 },
-        { textoPergunta: "Quantos títulos de Libertadores tem o Grêmio?", 
-          opcoes: ["1", "2", "3", "4"], 
-          respostaCorreta: 2 },
-    ]
-};
-
-let indicePerguntaAtual = 0;
+// Global Variables
+let questoesData = [];
+let indiceQuestaoAtual = 0;
 let pontuacao = 0;
 
-function carregarPergunta(indicePergunta) {
-    const perguntaAtual = dadosPerguntas.perguntas[indicePergunta];
-    document.getElementById("texto-pergunta").innerText = perguntaAtual.textoPergunta;
-    document.getElementById("numero-questao").innerText = indicePergunta + 1;
-    document.getElementById("pontuacao").innerText = `Pontuação: ${pontuacao}`;
+// Fetch questions data and start the quiz
+fetch('script.json')
+    .then(response => response.json())
+    .then(dados => {
+        questoesData = dados.questoes;
+        carregarQuestao(indiceQuestaoAtual);
+    })
+    .catch(erro => console.error('Erro ao carregar as questões:', erro));
 
-    const containerAlternativas = document.getElementById("container-alternativas");
-    containerAlternativas.innerHTML = "";
+// Function to load the current question
+function carregarQuestao(indiceQuestao) {
+    const questaoData = questoesData[indiceQuestao];
+    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
+    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
 
-    perguntaAtual.opcoes.forEach((opcao, indice) => {
-        const alternativaDiv = document.createElement("div");
-        alternativaDiv.classList.add("alternativa");
-        alternativaDiv.innerText = opcao;
+    const containerAlternativas = document.getElementById('alternativas');
+    containerAlternativas.innerHTML = '';
 
-        alternativaDiv.addEventListener("click", function () {
-            if (indice === perguntaAtual.respostaCorreta) {
-                alternativaDiv.classList.add("correta");
+    // Create answer buttons
+    questaoData.opcoes.forEach((opcao, indice) => {
+        const alternativaButton = document.createElement('button');
+        alternativaButton.classList.add('alternativa');
+        alternativaButton.innerText = opcao;
+
+        // Click event for checking answer
+        alternativaButton.addEventListener('click', () => {
+            if (indice === questaoData.respostaCorreta) {
                 pontuacao++;
+                mostrarModalCorreto();
             } else {
-                alternativaDiv.classList.add("incorreta");
-                alert(`Resposta incorreta! A resposta correta é: ${perguntaAtual.opcoes[perguntaAtual.respostaCorreta]}`);
+                mostrarModalIncorreto(questaoData.opcoes[questaoData.respostaCorreta]);
             }
-            document.getElementById("pontuacao").innerText = `Pontuação: ${pontuacao}`;
-            setTimeout(() => carregarProximaPergunta(), 1000);
         });
 
-        containerAlternativas.appendChild(alternativaDiv);
+        containerAlternativas.appendChild(alternativaButton);
     });
 }
 
-function carregarProximaPergunta() {
-    indicePerguntaAtual++;
-    if (indicePerguntaAtual < dadosPerguntas.perguntas.length) {
-        carregarPergunta(indicePerguntaAtual);
-    } else {
-        exibirResultadoFinal();
-    }
+// Function to show correct answer modal
+function mostrarModalCorreto() {
+    document.getElementById('modal-correct').style.display = 'flex';
 }
 
-function exibirResultadoFinal() {
-    document.getElementById("container-alternativas").style.display = "none";
-    document.getElementById("container-numero-questao").style.display = "none";
-    document.getElementById("texto-pergunta").style.display = "none";
-
-    const containerResultado = document.getElementById("container-resultado");
-    document.getElementById("mensagem-resultado").innerText = `Você acertou ${pontuacao} de ${dadosPerguntas.perguntas.length} perguntas!`;
-    containerResultado.style.display = "block";
+// Function to show incorrect answer modal with correct answer info
+function mostrarModalIncorreto(respostaCorreta) {
+    document.getElementById('texto-incorreto').innerText = `Errado! A resposta correta é: ${respostaCorreta}`;
+    document.getElementById('modal-incorrect').style.display = 'flex';
 }
 
-function reiniciarQuiz() {
-    indicePerguntaAtual = 0;
+// Function to close modal and proceed to the next question
+function fecharModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    proximaQuestao();
+}
+
+// Load next question or show final score
+function proximaQuestao() {
+    setTimeout(() => {
+        if (indiceQuestaoAtual < questoesData.length - 1) {
+            indiceQuestaoAtual++;
+            carregarQuestao(indiceQuestaoAtual);
+        } else {
+            exibirPontuacao();
+        }
+    }, 500);
+}
+
+// Function to display the final score
+function exibirPontuacao() {
+    document.getElementById('texto-questao').style.display = 'none';
+    document.getElementById('alternativas').style.display = 'none';
+    document.getElementById('resultado').style.display = 'block';
+    document.getElementById('pontuacao').innerText = `Pontuação: ${pontuacao} de ${questoesData.length}`;
+}
+
+// Reset quiz on restart
+document.getElementById('reiniciar').addEventListener('click', () => {
+    indiceQuestaoAtual = 0;
     pontuacao = 0;
-
-    document.getElementById("container-resultado").style.display = "none";
-
-    document.getElementById("container-alternativas").style.display = "block";
-    document.getElementById("container-numero-questao").style.display = "block";
-    document.getElementById("texto-pergunta").style.display = "block";
-    document.getElementById("pontuacao").innerText = `Pontuação: ${pontuacao}`;
-
-    carregarPergunta(indicePerguntaAtual);
-}
-
-document.addEventListener("DOMContentLoaded", () => carregarPergunta(indicePerguntaAtual));
+    document.getElementById('texto-questao').style.display = 'block';
+    document.getElementById('alternativas').style.display = 'block';
+    document.getElementById('resultado').style.display = 'none';
+    carregarQuestao(indiceQuestaoAtual);
+});

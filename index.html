@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quebra Melão - Quiz de Futebol</title>
+    <title>Quebra Melão - Quiz de futebol</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Jersey+10&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img id="iconeBola" src="img/chute-bola.png" alt="Cérebro">
+    <a href="inicio.html"><h1 id="tituloQuebra">Quebra</h1></a>
+    <a href="inicio.html"><h2 id="tituloMelao">Melão</h2></a>
+    
+    <div class="bolinhaQuestao"><p class="numeroQuestao" id="numero-questao">1</p></div>
+    <div class="pergunta"><h1 class="textoPergunta" id="texto-questao"></h1></div>
+    <div class="alternativas" id="alternativas"></div>
+    
+    <footer><h3>Quebra Melão | © @barbolaoo e @ramxsmaloka</h3></footer>
 
-    <img id="icone-cerebro" src="img/pngwing.com.png" alt="Cérebro">
-    <h1 id="titulo-quebra">Quebra</h1>
-    <h2 id="titulo-melao">Melão</h2>
-
-    <div class="container-numero-questao">
-        <p class="numero-questao" id="numero-questao">1</p>
+    <div id="resultado" class="resultado">
+        <h2 id="pontuacao"></h2>
+        <button id="reiniciar">Reiniciar Quiz</button>
     </div>
 
-    <div class="container-pergunta">
-        <h1 class="texto-pergunta" id="texto-pergunta"></h1></h1>
+    
+    <div id="modal-correct" class="modal">
+        <div class="modal-content">
+            <p>Resposta Correta!</p>
+            <button onclick="fecharModal('modal-correct')">Continuar</button>
+        </div>
     </div>
+
 
     <div class="container-alternativas" id="container-alternativas"></div>
 
@@ -29,6 +40,15 @@
     </div> 
 
     
+
+    
+    <div id="modal-incorrect" class="modal">
+        <div class="modal-content">
+            <p id="texto-incorreto"></p>
+            <button onclick="fecharModal('modal-incorrect')">Continuar</button>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
