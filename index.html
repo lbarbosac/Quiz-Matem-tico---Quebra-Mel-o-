@@ -6,21 +6,32 @@
     <title>Quebra Melão - Quiz de futebol</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
     <img id="iconeBola" src="img/chute-bola.png" alt="">
     <a href="inicio.html"><h1 id="tituloQuebra">Quebra</h1></a>
     <a href="inicio.html"><h2 id="tituloMelao">Melão</h2></a>
     
-    <div class="bolinhaQuestao"><p class="numeroQuestao" id="numero-questao">1</p></div>
-    <div class="pergunta"><h1 class="textoPergunta" id="texto-questao"></h1></div>
+    <div class="bolinhaQuestao">
+        <p class="numeroQuestao" id="numero-questao">1</p>
+    </div>
+    
+    <div class="pergunta">
+        <h1 class="textoPergunta" id="texto-questao"></h1>
+    </div>
+
     <div class="alternativas" id="alternativas"></div>
     
-    <footer><h3>Quebra Melão | © @barbolaoo e @ramxsmaloka</h3></footer>
+    <footer>
+        <h3>Quebra Melão | © @barbolaoo e @ramxsmaloka</h3>
+    </footer>
 
     <div id="resultado" class="resultado">
         <h2 id="pontuacao"></h2>
-        <button id="reiniciar">Reiniciar Quiz</button>
+        <a href="inicio.html"><button class="reiniciar">Reiniciar Quiz</button></a>
     </div>
 
 
