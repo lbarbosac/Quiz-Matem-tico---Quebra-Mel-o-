@@ -243,3 +243,15 @@ fetch('script.json')
         carregarQuestao(indiceQuestaoAtual);
     })
     .catch(erro => console.error('Erro ao carregar as questões:', erro));
+// Função para exibir o modal com mensagem e ícone
+function exibirModal(mensagem, correto) {
+    const icone = document.getElementById('iconeResultado');
+    const modalClasse = correto ? 'modal-correto' : 'modal-incorreto';
+    const simbolo = correto ? '✔️' : '❌';
+
+    mensagemResultado.innerText = mensagem;
+    mensagemResultado.className = modalClasse;
+    icone.innerText = simbolo; // Atualiza o ícone
+    icone.className = modalClasse; // Define a cor do ícone
+    modal.style.display = 'block';
+}

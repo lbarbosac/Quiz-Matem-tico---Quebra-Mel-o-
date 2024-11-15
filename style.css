@@ -225,3 +225,19 @@ h3 {
 .modal-incorreto {
     color: red;
 }
+/* Estilo básico do ícone no modal */
+.icone {
+    font-size: 48px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Cor do ícone para respostas corretas */
+.modal-correto .icone {
+    color: green;
+}
+
+/* Cor do ícone para respostas incorretas */
+.modal-incorreto .icone {
+    color: red;
+}
