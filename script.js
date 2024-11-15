@@ -3,14 +3,27 @@ let questoesData = [];
 let indiceQuestaoAtual = 0;
 let pontuacao = 0;
 
-// Carrega os dados das questões do arquivo JSON e inicia o quiz
-fetch('script.json')
-    .then(response => response.json())
-    .then(dados => {
-        questoesData = dados.questoes;
-        carregarQuestao(indiceQuestaoAtual);
-    })
-    .catch(erro => console.error('Erro ao carregar as questões:', erro));
+// Função para exibir o modal
+function exibirModal(mensagem) {
+    const modal = document.getElementById('modal-feedback');
+    const mensagemModal = document.getElementById('mensagem-modal');
+    const botaoFechar = document.getElementById('fechar-modal');
+
+    mensagemModal.innerText = mensagem; // Define a mensagem no modal
+    modal.style.display = 'block'; // Mostra o modal
+
+    // Evento para fechar o modal ao clicar no botão "x"
+    botaoFechar.onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    // Fecha o modal ao clicar fora dele
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
 
 // Função para carregar a questão atual
 function carregarQuestao(indiceQuestao) {
@@ -31,11 +44,11 @@ function carregarQuestao(indiceQuestao) {
         alternativaButton.addEventListener('click', () => {
             if (indice === questaoData.respostaCorreta) {
                 alternativaButton.style.backgroundColor = 'green';
-                alert('Correto!');
+                exibirModal('Correto!');
                 pontuacao++;
             } else {
                 alternativaButton.style.backgroundColor = 'red';
-                alert(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`);
+                exibirModal(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`);
             }
             proximaQuestao();
         });
@@ -53,70 +66,7 @@ function proximaQuestao() {
         } else {
             exibirPontuacao();
         }
-    }, 500); // Pequeno delay para transição
-}
-
-// Função para exibir a pontuação final
-function exibirPontuacao() {
-    document.getElementById('texto-questao').style.display = 'none';
-    document.getElementById('alternativas').style.display = 'none';
-    document.getElementById('resultado').style.display = 'block';
-    document.getElementById('pontuacao').innerText = `Pontuação: ${pontuacao} de ${questoesData.length}`;
-}
-
-// Reinicia o quiz ao clicar no botão "Reiniciar"
-document.getElementById('reiniciar').addEventListener('click', () => {
-    indiceQuestaoAtual = 0;
-    pontuacao = 0;
-    document.getElementById('texto-questao').style.display = 'block';
-    document.getElementById('alternativas').style.display = 'block';// Variáveis globais
-let questoesData = [];
-let indiceQuestaoAtual = 0;
-let pontuacao = 0;
-
-// Função para carregar a questão
-function carregarQuestao(indiceQuestao) {
-    const questaoData = questoesData[indiceQuestao];
-    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
-    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
-
-    const containerAlternativas = document.getElementById('alternativas');
-    containerAlternativas.innerHTML = ''; // Limpa as opções anteriores
-
-    // Cria botões para cada alternativa
-    questaoData.opcoes.forEach((opcao, indice) => {
-        const alternativaButton = document.createElement('button');
-        alternativaButton.classList.add('alternativa');
-        alternativaButton.innerText = opcao;
-
-        // Lógica de verificação de resposta
-        alternativaButton.addEventListener('click', function () {
-            if (indice === questaoData.respostaCorreta) {
-                alternativaButton.style.backgroundColor = 'green';
-                alert('Correto!');
-                pontuacao++;
-                proximaQuestao();
-            } else {
-                alternativaButton.style.backgroundColor = 'red';
-                alert(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`);
-                proximaQuestao();
-            }
-        });
-
-        containerAlternativas.appendChild(alternativaButton);
-    });
-}
-
-// Função para carregar a próxima questão
-function proximaQuestao() {
-    setTimeout(() => {
-        if (indiceQuestaoAtual < questoesData.length - 1) {
-            indiceQuestaoAtual++;
-            carregarQuestao(indiceQuestaoAtual);
-        } else {
-            exibirPontuacao();
-        }
-    }, 1000);
+    }, 1000); // Pequeno delay para transição
 }
 
 // Função para exibir a pontuação final
@@ -137,9 +87,6 @@ function reiniciarQuiz() {
     carregarQuestao(indiceQuestaoAtual);
 }
 
-// Evento de clique para reiniciar o quiz
-document.getElementById('reiniciar').addEventListener('click', reiniciarQuiz);
-
 // Carrega as questões do arquivo JSON e inicia o quiz
 fetch('script.json')
     .then(response => response.json())
@@ -149,21 +96,64 @@ fetch('script.json')
     })
     .catch(erro => console.error('Erro ao carregar as questões:', erro));
 
-    document.getElementById('resultado').style.display = 'none';
-    carregarQuestao(indiceQuestaoAtual);
+// Inicializa o evento de clique no botão "Reiniciar"
+document.getElementById('reiniciar').addEventListener('click', reiniciarQuiz);
+// Função para exibir o modal com mensagens dinâmicas
+function exibirModal(mensagem, tipo) {
+    const modal = document.getElementById('modal-feedback');
+    const mensagemModal = document.getElementById('mensagem-modal');
+    const botaoFechar = document.getElementById('fechar-modal');
+
+    // Define a mensagem e o estilo com base no tipo
+    if (tipo === 'correto') {
+        mensagemModal.innerHTML = `✅ ${mensagem}`;
+    } else if (tipo === 'errado') {
+        mensagemModal.innerHTML = `❌ ${mensagem}`;
+    }
+
+    modal.style.display = 'block'; // Mostra o modal
+
+    // Evento para fechar o modal ao clicar no botão "x"
+    botaoFechar.onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    // Fecha o modal ao clicar fora dele
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
 }
 
-// Evento de clique para reiniciar o quiz
-,document.getElementById('reiniciar').addEventListener('click', reiniciarQuiz)
+// Atualiza a lógica de feedback nas alternativas
+function carregarQuestao(indiceQuestao) {
+    const questaoData = questoesData[indiceQuestao];
+    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
+    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
 
-// Carrega as questões do arquivo JSON e inicia o quiz
-,fetch('script.json')
-    .then(response => response.json())
-    .then(dados => {
-        questoesData = dados.questoes;
-        carregarQuestao(indiceQuestaoAtual);
-    })
-    .catch(erro => console.error('Erro ao carregar as questões:', erro)) 
-)
+    const containerAlternativas = document.getElementById('alternativas');
+    containerAlternativas.innerHTML = ''; // Limpa as alternativas anteriores
 
+    // Cria botões de alternativas
+    questaoData.opcoes.forEach((opcao, indice) => {
+        const alternativaButton = document.createElement('button');
+        alternativaButton.classList.add('alternativa');
+        alternativaButton.innerText = opcao;
 
+        // Verifica se a resposta está correta e dá feedback
+        alternativaButton.addEventListener('click', () => {
+            if (indice === questaoData.respostaCorreta) {
+                alternativaButton.style.backgroundColor = 'green';
+                exibirModal('Correto!', 'correto');
+                pontuacao++;
+            } else {
+                alternativaButton.style.backgroundColor = 'red';
+                exibirModal(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`, 'errado');
+            }
+            proximaQuestao();
+        });
+
+        containerAlternativas.appendChild(alternativaButton);
+    });
+}
