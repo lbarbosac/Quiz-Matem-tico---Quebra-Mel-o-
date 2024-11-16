@@ -30,7 +30,8 @@ body {
 
 #tituloQuebra { 
     color: #00f; 
-    margin-left: 20px; }
+    margin-left: 20px; 
+}
 
 #tituloMelao {
      color: #000; 
@@ -202,7 +203,7 @@ h3 {
 }
 
 .fechar {
-    color: #aaa;
+    color: #817c7c;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -211,6 +212,6 @@ h3 {
 
 .fechar:hover,
 .fechar:focus {
-    color: black;
+    color: rgb(255, 0, 0);
     text-decoration: none;
 }
