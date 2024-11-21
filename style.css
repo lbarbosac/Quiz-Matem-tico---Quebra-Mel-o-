@@ -216,3 +216,7 @@ h3 {
     text-decoration: none;
 }
 
+#mensagem-modal {
+    margin-top: 10px;
+    font-size: 14px;
+}
