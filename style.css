@@ -191,7 +191,7 @@ h3 {
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
-    padding: 20px;
+    padding: 28px;
     border: 1px solid #888;
     width: 303px;
     height: 87px;
@@ -208,6 +208,7 @@ h3 {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: -20px;
 }
 
 .fechar:hover,

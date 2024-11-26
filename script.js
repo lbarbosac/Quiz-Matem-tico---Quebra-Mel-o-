@@ -25,6 +25,18 @@ function exibirModal(mensagem) {
     };
 }
 
+var timer, sound;
+sound = new Howl ({
+    src: [''],
+    autoplay: true,
+    loop: true,
+    volume: 1,
+});
+
+setTimeout(function(){
+    sound.play();
+},100);
+
 // Função para carregar a questão atual
 function carregarQuestao(indiceQuestao) {
     const questaoData = questoesData[indiceQuestao];
