@@ -29,7 +29,7 @@ body {
 
 button {
     --color: #0077ff;
-    font-family: inherit;
+    font-family: "Noto Sans", sans-serif;
     display: inline-block;
     width: 400px;
     height: 100px;
@@ -50,8 +50,8 @@ button {
     position: absolute;
     content: "";
     background: var(--color);
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     z-index: -1;
     border-radius: 10%;
   }
@@ -63,7 +63,7 @@ button {
   button:before {
     top: 100%;
     left: 100%;
-    transition: 0.3s all;
+    transition: 0.6s all;
   }
   
   button:hover::before {
