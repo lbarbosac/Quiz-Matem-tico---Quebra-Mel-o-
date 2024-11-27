@@ -10,16 +10,10 @@ body {
 
 #iconeBola { 
     width: 84px;
-    
-    
-
-
-
-    
     height: 66px; 
     margin-left: 10px; 
     margin-top: 10px;
- }
+}
 
 #tituloQuebra, #tituloMelao { 
     font-size: 40px; 
@@ -35,7 +29,7 @@ body {
 
 #tituloMelao {
      color: #000; 
-    }
+}
 
 .bolinhaQuestao {
      width: 80px; 
@@ -50,9 +44,7 @@ body {
      justify-content: center; 
      font-family: Arial, Helvetica, sans-serif;
      font-size: 50px;
-    }
-
-
+}
 
 .textoPergunta { 
     height: 80%;
@@ -94,7 +86,7 @@ body {
 
      .alternativa:hover { 
     background-color: #004288; 
-    }
+}
 
 footer { 
     width: 100%; 
@@ -119,9 +111,6 @@ h3 {
     display: none; 
     text-align: center; 
     margin-top: 30px;
-
-
-
 }
 
 #pontuacao { 
