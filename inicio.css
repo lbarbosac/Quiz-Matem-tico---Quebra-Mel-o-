@@ -1,13 +1,23 @@
 body {
-  background-image: url(https://i.pinimg.com/originals/7b/6b/0b/7b6b0b26a4f9fe94a66f59069b2614c9.gif);
+  background-image: url(img/fundo-branco4.avif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 } 
+
+.caixa-titulo {
+  width: 400px;
+  height: 150px;
+  background-color: rgb(219, 161, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #tituloQuebra {
     font-size: 80px;
     width: 20%;
-    margin-left: 540px;
+    margin-left: 558px;
     margin-top: 50px;
     font-family: "Jersey 10", sans-serif;
     color: #0077ff;
@@ -16,7 +26,7 @@ body {
 #tituloMelao {
     font-size: 80px;
     width: 18%;
-    margin-left: 565px;
+    margin-left: 583px;
     margin-top: -60px;
     font-family: "Jersey 10", sans-serif;
 }
