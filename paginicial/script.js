@@ -25,7 +25,17 @@ function exibirModal(mensagem) {
     };
 }
 
+var timer, sound;
+sound = new Howl ({
+    src: [''],
+    autoplay: true,
+    loop: true,
+    volume: 1,
+});
 
+setTimeout(function(){
+    sound.play();
+},100);
 
 // Função para carregar a questão atual
 function carregarQuestao(indiceQuestao) {
@@ -216,58 +226,6 @@ function carregarQuestao(indiceQuestao) {
             proximaQuestao();
         });
 
-        containerAlternativas.appendChild(alternativaButton);
-    });
-}
-//Atualiza a barra de progresso com base nos acertos e erros
-function atualizarBarraProgresso() {
-    const barraAcerto = document.getElementById('barra-acerto');
-    const barraErro = document.getElementById('barra-erro');
-    const pontuacaoAtual = document.getElementById('pontuacao-atual');
-    const totalQuestoes = questoesData.length;
-    const larguraAcerto = (pontuacao / totalQuestoes) * 100;
-    const larguraErro = ((indiceQuestaoAtual + 1 - pontuacao) / totalQuestoes) * 100;
-    barraAcerto.style.width = `${larguraAcerto}%`;
-    barraErro.style.width = `${larguraErro}%`;
-    pontuacaoAtual.innerText = `Pontuação: ${pontuacao}`;
-}
-// Atualize a chamada da barra de progresso na função `proximaQuestao`
-function proximaQuestao() {
-    setTimeout(() => {
-        if (indiceQuestaoAtual < questoesData.length - 1) {
-            indiceQuestaoAtual++;
-            carregarQuestao(indiceQuestaoAtual);
-            atualizarBarraProgresso(); // Atualiza a barra a cada nova questão
-        } else {
-            exibirPontuacao();
-            atualizarBarraProgresso(); // Atualiza ao final do quiz
-        }
-    }, 1000);
-}
-// Atualize a lógica de feedback nas alternativas para chamar a barra de progresso
-function carregarQuestao(indiceQuestao) {
-    const questaoData = questoesData[indiceQuestao];
-    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
-    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
-    const containerAlternativas = document.getElementById('alternativas');
-    containerAlternativas.innerHTML = ''; // Limpa as alternativas anteriores
-    // Cria botões de alternativas
-    questaoData.opcoes.forEach((opcao, indice) => {
-        const alternativaButton = document.createElement('button');
-        alternativaButton.classList.add('alternativa');
-        alternativaButton.innerText = opcao;
-        // Verifica se a resposta está correta e dá feedback
-        alternativaButton.addEventListener('click', () => {
-            if (indice === questaoData.respostaCorreta) {
-                alternativaButton.style.backgroundColor = 'green';
-                exibirModal('Correto!', 'correto');
-                pontuacao++;
-            } else {
-                alternativaButton.style.backgroundColor = 'red';
-                exibirModal(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`, 'errado');
-            }
-            proximaQuestao();
-        });
         containerAlternativas.appendChild(alternativaButton);
     });
 }
