@@ -106,9 +106,10 @@ footer {
 }
 
 h3 {
-    margin-left: 410px;
+    margin-left: 450px;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
+    text-align: justify;
 }
 
     
