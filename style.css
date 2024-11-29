@@ -126,7 +126,7 @@ h3 {
     font-optical-sizing: auto;
 }
 
-.reiniciar {
+#reiniciar {
     --color: #0077ff;
     font-family: inherit;
     display: inline-block;
@@ -145,7 +145,7 @@ h3 {
     position: relative;
 }
 
-.reiniciar::before {
+#reiniciar::before {
     position: absolute;
     content: "";
     background: var(--color);
@@ -155,17 +155,17 @@ h3 {
     border-radius: 10%;
 }
 
-.reiniciar:hover {
+#reiniciar:hover {
     color: white;
   }
   
-  .reiniciar:before {
+  #reiniciar:before {
     top: 100%;
     left: 100%;
     transition: 0.3s all;
   }
   
-  .reiniciar:hover::before {
+  #reiniciar:hover::before {
     top: -30px;
     left: -30px;
   }
@@ -234,16 +234,18 @@ h3 {
     border-radius: 10px 0 0 10px;
     width: 0;
     transition: width 0.4s ease-in-out;
+    z-index: 1; 
 }
 
 #barra-erro {
     position: absolute;
     height: 100%;
-    background: linear-gradient(to left, #f44336,#f44336 );
+    background: linear-gradient(to left, #f44336, #f44336);
     border-radius: 0 10px 10px 0;
     right: 0;
     width: 0;
     transition: width 0.4s ease-in-out;
+    z-index: 0; 
 }
 
 #pontuacao-atual {
@@ -255,5 +257,12 @@ h3 {
     font-weight: bold;
     color: #333;
     line-height: 20px;
-    z-index: 10;
+    z-index: 10; 
+}
+
+
+.alternativa:focus {
+    outline: 2px solid #004288;
+    background-color: #004288;
+    color: #fff;
 }

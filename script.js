@@ -271,3 +271,137 @@ function carregarQuestao(indiceQuestao) {
         containerAlternativas.appendChild(alternativaButton);
     });
 }
+function atualizarBarraProgresso(acerto) {
+    const barraAcerto = document.getElementById('barra-acerto');
+    const barraErro = document.getElementById('barra-erro');
+    const pontuacaoAtual = document.getElementById('pontuacao-atual');
+
+    const totalQuestoes = questoesData.length;
+
+    // Calcula a largura baseada nos acertos ou erros
+    const larguraAcerto = ((pontuacao + (acerto ? 1 : 0)) / totalQuestoes) * 100;
+    const larguraErro = (((indiceQuestaoAtual + 1 - pontuacao) + (acerto ? 0 : 1)) / totalQuestoes) * 100;
+
+    // Atualiza visualmente as barras
+    if (acerto) {
+        barraAcerto.style.width = `${larguraAcerto}%`;
+    } else {
+        barraErro.style.width = `${larguraErro}%`;
+    }
+
+    // Atualiza o texto da pontuação
+    pontuacaoAtual.innerText = `Pontuação: ${pontuacao}`;
+}
+
+// Modificação na lógica de clique das alternativas
+function carregarQuestao(indiceQuestao) {
+    const questaoData = questoesData[indiceQuestao];
+    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
+    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
+
+    const containerAlternativas = document.getElementById('alternativas');
+    containerAlternativas.innerHTML = ''; // Limpa as alternativas anteriores
+
+    questaoData.opcoes.forEach((opcao, indice) => {
+        const alternativaButton = document.createElement('button');
+        alternativaButton.classList.add('alternativa');
+        alternativaButton.innerText = opcao;
+
+        alternativaButton.addEventListener('click', () => {
+            if (indice === questaoData.respostaCorreta) {
+                alternativaButton.style.backgroundColor = 'green';
+                exibirModal('Correto!', 'correto');
+                pontuacao++;
+                atualizarBarraProgresso(true); // Atualiza para acerto
+            } else {
+                alternativaButton.style.backgroundColor = 'red';
+                exibirModal(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`, 'errado');
+                atualizarBarraProgresso(false); // Atualiza para erro
+            }
+            proximaQuestao();
+        });
+
+        containerAlternativas.appendChild(alternativaButton);
+    });
+}
+
+function proximaQuestao() {
+    setTimeout(() => {
+        if (indiceQuestaoAtual < questoesData.length - 1) {
+            indiceQuestaoAtual++;
+            carregarQuestao(indiceQuestaoAtual);
+        } else {
+            exibirPontuacao();
+        }
+    }, 1000);
+}
+// Seletores de som
+const somCorreto = document.getElementById('som-correto');
+const somErrado = document.getElementById('som-errado');
+
+// Atualize a função para exibir o modal e incluir sons
+function exibirModal(mensagem, tipo) {
+    const modal = document.getElementById('modal-feedback');
+    const mensagemModal = document.getElementById('mensagem-modal');
+    const botaoFechar = document.getElementById('fechar-modal');
+
+    if (tipo === 'correto') {
+        mensagemModal.innerHTML = `✅ ${mensagem}`;
+        somCorreto.play(); // Reproduz o som de acerto
+    } else if (tipo === 'errado') {
+        mensagemModal.innerHTML = `❌ ${mensagem}`;
+        somErrado.play(); // Reproduz o som de erro
+    }
+
+    modal.style.display = 'block';
+
+    // Acessibilidade: Foca no modal para leitura
+    modal.setAttribute('aria-live', 'assertive');
+    modal.setAttribute('role', 'alert');
+
+    botaoFechar.onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
+
+// Modifique a função de clique nas alternativas
+function carregarQuestao(indiceQuestao) {
+    const questaoData = questoesData[indiceQuestao];
+    document.getElementById('texto-questao').innerText = questaoData.textoPergunta;
+    document.getElementById('numero-questao').innerText = indiceQuestao + 1;
+
+    const containerAlternativas = document.getElementById('alternativas');
+    containerAlternativas.innerHTML = ''; // Limpa as alternativas anteriores
+
+    questaoData.opcoes.forEach((opcao, indice) => {
+        const alternativaButton = document.createElement('button');
+        alternativaButton.classList.add('alternativa');
+        alternativaButton.innerText = opcao;
+
+        // Adiciona ARIA
+        alternativaButton.setAttribute('aria-label', `Opção ${indice + 1}: ${opcao}`);
+        alternativaButton.setAttribute('tabindex', '0');
+
+        alternativaButton.addEventListener('click', () => {
+            if (indice === questaoData.respostaCorreta) {
+                alternativaButton.style.backgroundColor = 'green';
+                exibirModal('Correto!', 'correto');
+                pontuacao++;
+                atualizarBarraProgresso(true); // Atualiza para acerto
+            } else {
+                alternativaButton.style.backgroundColor = 'red';
+                exibirModal(`Errado! A resposta correta é: ${questaoData.opcoes[questaoData.respostaCorreta]}`, 'errado');
+                atualizarBarraProgresso(false); // Atualiza para erro
+            }
+            proximaQuestao();
+        });
+
+        containerAlternativas.appendChild(alternativaButton);
+    });
+}
