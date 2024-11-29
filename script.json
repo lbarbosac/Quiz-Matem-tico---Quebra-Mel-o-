@@ -22,12 +22,12 @@
         },
         {
             "textoPergunta": "Quem marcou o gol do título da Copa do Brasil de 2016?",
-            "opcoes": ["Geromel", "Everton Cebolinha", "Douglas", "Pedro Rocha"],
+            "opcoes": ["Geromel", "Bolanõs", "Douglas", "Pedro Rocha"],
             "respostaCorreta": 1
         },
         {
-            "textoPergunta": "Qual dupla de zaga foi essencial na sequência de títulos de 2016 á 2024 no Grêmio?",
-            "opcoes": ["Geromel e Kannemann", "Luan e Artur", "Jardel e Paulo Nunes", "Roger Machado e Renato Gaúcho"],
+            "textoPergunta": "Quem ficou conhecido como reizinho no Grêmio?",
+            "opcoes": ["Luan", "Artur", "Paulo Nunes", "Roger Machado"],
             "respostaCorreta": 0
         },
         {
@@ -41,14 +41,14 @@
             "respostaCorreta": 0
         },
         {
-            "textoPergunta": "Em que ano o Grêmio foi fundado?",
-            "opcoes": ["1901", "1903", "1910", "1920"],
-            "respostaCorreta": 1
+            "textoPergunta": "Qual Goleiro foi essencial na conquista da libertadores de 2017?",
+            "opcoes": ["Victor", "Paulo Victor", "Marcelo Grohe", "Danrlei"],
+            "respostaCorreta": 2
         },
         {
-            "textoPergunta": "Como o Grêmio é conhecido?",
-            "opcoes": ["Tricolor Paulista", "Gigante da Colina", "Imortal Tricolor", "Furacão"],
-            "respostaCorreta": 2
+            "textoPergunta": "Quem era conhecido como diabo loiro?",
+            "opcoes": ["Paulo Nunes", "Arthur Melo", "Jardiel", "Gabriel Mec"],
+            "respostaCorreta": 0
         }
     ]
 }
